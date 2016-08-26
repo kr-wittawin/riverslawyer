@@ -298,7 +298,20 @@ h1.navbar-brand {
     text-transform: uppercase;
 }
 
+.navbar-brand img {
+    position:absolute;
+    top:20px;
+    width: 150px;
+    height:auto;
+}
 
+.navbar-fixed-top {
+    min-height: 140px;
+}
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: 140px;
+}
 /*=================================================================
 	Home Slider
 ==================================================================*/
