@@ -2,9 +2,8 @@
 *
 * ---------------------------------------------------------------------------
 *
-* Template : Blue - A One-Page HTML Portfolio/Business Template
-* Author : Muhammad Morshd
-* Author URI : http://morsheds.com
+* Rivers Lawyer
+* Author : Rivers Lawyer
 *
 * ---------------------------------------------------------------------------
 *
@@ -298,6 +297,9 @@ h1.navbar-brand {
     text-transform: uppercase;
 }
 
+.navbar-inverse .navbar-nav > li > a:hover {
+border-bottom: 2px solid #B2BEB5;
+}
 .navbar-brand img {
     position:absolute;
     top:20px;
@@ -614,11 +616,30 @@ h1.navbar-brand {
          -o-transform: rotate(-48deg);
             transform: rotate(-48deg);
 }
-
+.service-navigation {
+    margin-bottom: 20px;
+}
 .service-item h3 {
     font-size: 20px;
     text-transform: uppercase;
 }
+
+.service-item:hover{
+    border-bottom: 2px solid #B2BEB5;
+}
+
+.service-item.current{
+    border-bottom: 2px solid #B2BEB5;
+}
+
+.contact-panel {
+    background-color: #b2beb5;
+}
+
+.contact-panel h2, .contact-panel p {
+    color: white;
+}
+
 /*=================================================================
 	Portfolio
 ==================================================================*/

@@ -37,16 +37,6 @@
         <link rel="stylesheet" href="css/animate.css">
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
-
-        <!-- Javascript
-		================================================== -->
-		<!-- Modernizer Script for old Browsers -->
-        <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
-        <!-- jquery.js -->
-        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-		<!-- bootstrap.js -->
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-
     </head>
 
     <body id="body">
@@ -85,9 +75,9 @@
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation" >
                     <ul id="nav" class="nav navbar-nav" >
-                        <li><a href="#body">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#portfolio">About us</a></li>
-                        <li class="dropdown">
+                        <li class="dropdown active">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                 <li><a href="#business">BUSINESS</a></li>
@@ -152,43 +142,35 @@
                     </div>
                 </div>
             </div>
+        </section>
         -->
             <!--Collapsable Content Button--->
-            <div class="container">
-                <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
-                    <div class="service-item" data-toggle="collapse" data-target="#business-content">
-                        <div class="service-icon">
-                            <i class="fa fa-bank fa-3x"></i>
-                        </div>
-                        <h3>Business</h3>
+            <div class="container" id = "service-navigation">
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
+                    <div class="service-item current" data-toggle="tab" data-target="#business-content">
+                        <a href =#><h3>Business</h3></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
-                    <div class="service-item" data-toggle="collapse" data-target= "#property-content">
-                        <div class="service-icon">
-                            <i class="fa fa-building fa-3x"></i>
-                        </div>
-                        <h3>Property</h3>
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
+                    <div class="service-item" data-toggle="tab" data-target= "#property-content">
+                        <a href =#><h3>Property</h3></a>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
-                    <div class="service-item" data-toggle="collapse" data-target= "#immigration-content">
-                        <div class="service-icon">
-                            <i class="fa fa-users fa-3x"></i>
-                        </div>
-                        <h3>Immigration</h3>
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
+                    <div class="service-item" data-toggle="tab" data-target= "#immigration-content">
+                        <a href =#><h3>Immigration</h3></a>
                     </div>
                 </div>
             </div>
             <!--content start--->
-            <div class="container services-panel">
-                <div class="col-md-8 col-sm-6 col-xs-12 collapse" id ="business-content">
+            <div class="container services-panel tab-content">
+                <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade active in" id ="business-content">
                     <div class="content-title">
-                      <h1>Business</h1>
+                      <a href=#><h1>Business</h1></a>
                     </div>
                     <div>
-                      <h2>Proin nunc ante, tempus ac porta blandit. </h2>
+                      <h2>We can help with your Business Law </h2>
                       <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
                       <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
                       <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
@@ -199,12 +181,12 @@
                       <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
                     </div>
                 </div>
-                <div class="col-md-8 col-sm-6 col-xs-12 collapse" id ="property-content">
+                <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade in" id ="property-content">
                     <div class="content-title">
                       <h1>Property</h1>
                     </div>
                     <div>
-                      <h2>Proin nunc ante, tempus ac porta blandit. </h2>
+                      <h2>We can help with your Property Law.  </h2>
                       <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
                       <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
                       <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
@@ -215,12 +197,12 @@
                       <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
                     </div>
                 </div>
-                <div class="col-md-8 col-sm-6 col-xs-12 collapse" id ="immigration-content">
+                <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade in" id ="immigration-content">
                     <div class="content-title">
-                      <h1>Immigration</h1>
+                      <h1>Immigration </h1>
                     </div>
                     <div>
-                      <h2>Proin nunc ante, tempus ac porta blandit. </h2>
+                      <h2>We can help with your immigration Law. </h2>
                       <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
                       <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
                       <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
@@ -231,17 +213,27 @@
                       <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel">
                     <div class="title">
                       <h2>Contact Us</h2>
                     </div>
-                    <div class="Business-contact">
+                    <div class="contact-panel-content">
                       <P> Kevin Kang</P>
                       <P> Suite 609, 530 Little Collins Street, Melbourne VIC 3000</P>
                       <P> Email: kevin.kang@riverslawyerse.com.au<P>
                     </div>
-                </div>
+                </aside>
             </div>
-            <!----primary end--->
-        </section>
+            <!--content end--->
         <!-- end Service section -->
+        <!-- Javascript
+        ================================================== -->
+        <!-- Modernizer Script for old Browsers -->
+        <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+        <!-- jquery.js -->
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+        <!-- bootstrap.js -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <!-- RL_function.js -->
+        <script type="text/javascript" src="js/RL_function.js"></script>
+    </body>
