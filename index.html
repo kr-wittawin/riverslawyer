@@ -57,80 +57,60 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-					<!-- /responsive nav button -->
-					
-					<!-- logo -->
-					<h1 class="navbar-brand">
-						<a href="#body">RiversLawyers</a>
-					</h1>
-					<!-- /logo -->
+                    <!-- /responsive nav button -->
+
+                    <!-- logo -->
+                    <h1 class="navbar-brand">
+                        <a href="index.html#body"><img src="img/RL_Brand.png"  alt="RIVERS LAWYER"></a>
+                    </h1>
+                    <!-- /logo -->
                 </div>
 
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#body">Home</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#portfolio">About us</a></li>
-                        <li><a href="#testimonials">Automated Ticket Appeal</a></li>
-                        <li><a href="#price">News</a></li>
-                        <li><a href="#contact">Contact us</a></li>
+                <!-- social media nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation" >
+                    <ul id ="social media" class="nav navbar-nav">
+                        <li class="icon"><a href="http://www.facebook.com" role="button" target="_blank"><i class="fa fa-facebook"></i><span></span></a>
+                        <li class="icon"><a href="http://www.linkedin.com" role="button" target="_blank"><i class="fa fa-linkedin"></i><span></span></a>
+                        <li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li class="icon"><a href="http://www.google.com" role="button" target="_blank"><i class="fa fa-fire"></i><span></span></a>
                     </ul>
                 </nav>
-				<!-- /main nav -->
-				
+                <!-- /social media nav -->
+                <!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation" >
+                    <ul id="nav" class="nav navbar-nav" >
+                        <li><a href="index.html#body">Home</a></li>
+                        <li><a href="index.html#aboutus">About us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="#body">Automated Ticket Appeal</a></li>
+                        <li><a href="index.html#news">News</a></li>
+                        <li><a href="index.html#contact">Contact us</a></li>
+                    </ul>
+                </nav>
+                <!-- /main nav -->
+
             </div>
         </header>
         <!--
         End Fixed Navigation
         ==================================== -->
-		
-		<main class="site-content" role="main">
-		
-        <!--
-        Home
-        ==================================== -->
-		
-		<section id="home-slider">
-            <div id="slider" class="sl-slider-wrapper">
-
-				<div class="sl-slider">
-				
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-
-						<div class="bg-img bg-img-1"></div>
-
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2 class="animated fadeInDown">RiversLaywers</h2>
-                                <span class="animated fadeInDown">Smarter Law. Better help for people. Slogan</span>
-                            </div>
-                        </div>
-						
-					</div>
-					
-					
-				</div><!-- /sl-slider -->
-
-                <!-- 
-                <nav id="nav-arrows" class="nav-arrows">
-                    <span class="nav-arrow-prev">Previous</span>
-                    <span class="nav-arrow-next">Next</span>
-                </nav>
-                -->
-               
-			</div><!-- /slider-wrapper -->
-		</section>
+        <!---banner section-->
+        <div class="banner container">
+              <h1>Rivers Lawyers</h1>
+              <h2>Motto</h2>
+        </div>
 		
         <!--
         End Home SliderEnd
         ==================================== -->
+
+		<!-- services -->
 		<section id="services">	
 			<div class="container">
                 <div class="row">
@@ -141,109 +121,154 @@
                     </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
-                        <div class="service-item">
+                        <a href="services.html"><div class="service-item">
                             <div class="service-icon">
                                 <i class="fa fa-bank fa-3x"></i>
                             </div>
                             <h3>Business</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
-                    </div>
+                        </div></a>
+                    </div></a>
 
                     <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.3s">
-                        <div class="service-item">
+                        <a href="services.html"><div class="service-item">
                             <div class="service-icon">
                                 <i class="fa fa-building fa-3x"></i>
                             </div>
                             <h3>Property</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
-                    </div>
+                    </div></a>
 
                     <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.6s">
-                        <div class="service-item">
+                        <a href="services.html"><div class="service-item">
                             <div class="service-icon">
                                 <i class="fa fa-users fa-3x"></i>
                             </div>
                             <h3>Immigration</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+		</section><br><br><br>
+
+		<!-- About us -->
+		<section id="aboutus">	
+			<div class="container">
+                <div class="row">
+                    <div class="sec-title text-center">
+                        <h2 class="wow">About Us</h2>
+						<h4 class="wow">Mission</h4> 
+                        <p class="wow">The legal help for anyone, anytime and anywhere.  
+							Easy, affordable and fast way to get the legal help</p><br>
+						<h4 class="wow">Team</h4> 
+                        <p class="wow">TBC</p><br>
+						<h4 class="wow">Price</h4> 
+                        <p class="wow">TBC</p><br>
                     </div>
                 </div>
             </div>
 		</section>
-			<!-- Contact section -->
-			<section id="contact" >
-				<div class="container">
-					<div class="row">
-						
-						<div class="sec-title text-center wow animated fadeInDown">
-							<h2>Contact</h2>
-							<p>Leave a Message</p>
-						</div>
-						
-						
-						<div class="col-md-7 contact-form wow animated fadeInLeft">
-							<form action="#" method="post">
-								<div class="input-field">
-									<input type="text" name="name" class="form-control" placeholder="Your Name...">
+
+		<!-- News -->
+		<section id="news">	
+			<div class="container">
+                <div class="row">
+                    <div class="sec-title text-center">
+                        <h2 class="wow">News</h2>
+						<div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
+							<div class="service-item">
+								<div class="service-icon">
+									<i class="fa fa-newspaper-o fa-3x"></i>
 								</div>
-								<div class="input-field">
-									<input type="email" name="email" class="form-control" placeholder="Your Email...">
+								<h3>Topic1</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+							</div></a>
+						</div></a>
+
+						<div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.3s">
+							<div class="service-item">
+								<div class="service-icon">
+									<i class="fa fa-newspaper-o fa-3x"></i>
 								</div>
-								<div class="input-field">
-									<input type="text" name="subject" class="form-control" placeholder="Subject...">
-								</div>
-								<div class="input-field">
-									<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
-								</div>
-						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
-							</form>
-						</div>
-						
-						<div class="col-md-5 wow animated fadeInRight">
-							<address class="contact-details">
-								<h3>Contact Us</h3>						
-								<p><i class="fa fa-pencil"></i>RiversLawyers<span>530 Little Collins St, Melbourne </span><span>Australia</span></p><br>
-								<p><i class="fa fa-phone"></i>+61 (0) 423 950 250  </p>
-								<p><i class="fa fa-envelope"></i>kevin.kang@riverslawyers.com.au</p>
-							</address><br><br>
-							<div class="footer-social">
-								<ul>
-									<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
-									<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
-									<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-skype fa-3x"></i></a></li>
-									<li class="wow animated zoomIn" data-wow-delay="0.9s"><a href="#"><i class="fa fa-dribbble fa-3x"></i></a></li>
-									<li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
-								</ul>
+								<h3>Topic2</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 							</div>
+						</div></a>
+
+						<div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.6s">
+							<div class="service-item">
+								<div class="service-icon">
+									<i class="fa fa-newspaper-o fa-3x"></i>
+								</div>
+								<h3>Topic3</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+							</div></a>
+						</div>
+                </div>
+            </div>
+		</section><br><br>
+
+		<!-- Contact section -->
+		<section id="contact" >
+			<div class="container">
+				<div class="row">
+					
+					<div class="sec-title text-center wow animated fadeInDown">
+						<h2>Contact Us</h2>
+					</div>
+					
+					<div class="col-md-7 contact-form wow animated fadeInLeft">
+						<form action="#" method="post">
+							<div class="input-field">
+								<input type="text" name="name" class="form-control" placeholder="Your Name...">
+							</div>
+							<div class="input-field">
+								<input type="email" name="email" class="form-control" placeholder="Your Email...">
+							</div>
+							<div class="input-field">
+								<input type="text" name="subject" class="form-control" placeholder="Subject...">
+							</div>
+							<div class="input-field">
+								<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
+							</div>
+							<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
+						</form>
+					</div>
+					
+					<div class="col-md-5 wow animated fadeInRight">
+						<address class="contact-details">
+							<h3>Contact Us</h3>						
+							<p><i class="fa fa-pencil"></i>RiversLawyers<span>530 Little Collins St, Melbourne </span><span>Australia</span></p><br>
+							<p><i class="fa fa-phone"></i>+61 (0) 423 950 250  </p>
+							<p><i class="fa fa-envelope"></i>kevin.kang@riverslawyers.com.au</p>
+						</address><br><br>
+						<div class="footer-social">
+							<ul>
+								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-skype fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="0.9s"><a href="#"><i class="fa fa-dribbble fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end Contact section -->
+			</div>
+		</section>
+		<!-- end Contact section -->
 
-		</main>
+		</main><br><br>
 		
 		<footer id="footer">
 			<div class="container">
 				<div class="row text-center">
 					<div class="footer-content">
 						<div class="wow animated fadeInDown">
-							<p>newsletter signup</p>
-							<p>Get Cool Stuff! We hate spam!</p>
+							<p>In development phase.</p>
 						</div>
-						<form action="#" method="post" class="subscribe-form wow animated fadeInUp">
-							<div class="input-field">
-								<input type="email" class="subscribe form-control" placeholder="Enter Your Email...">
-								<button type="submit" class="submit-icon">
-									<i class="fa fa-paper-plane fa-lg"></i>
-								</button>
-							</div>
-						</form>
-						
-						
-						<p>Copyright &copy; 2014-2015 Design and Developed By<a href="http://www.themefisher.com">Themefisher</a> </p>
+						<p>Design and Developed By Wittawin and Ben</p>
 					</div>
 				</div>
 			</div>
