@@ -24,11 +24,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
 		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
 		<!-- bootstrap.min -->
         <link rel="stylesheet" href="css/jquery.fancybox.css">
 		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
 		<!-- bootstrap.min -->
         <link rel="stylesheet" href="css/owl.carousel.css">
 		<!-- bootstrap.min -->
@@ -37,54 +37,203 @@
         <link rel="stylesheet" href="css/animate.css">
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
-
-		<!-- Modernizer Script for old Browsers -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
-
     </head>
 
     <body id="body">
+        <!--
+        Fixed Navigation
+        ==================================== -->
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
+
+                    <!-- logo -->
+                    <h1 class="navbar-brand">
+                        <a href="#body"><img src="img/RL_Brand.png"  alt="RIVERS LAWYER"></a>
+                    </h1>
+                    <!-- /logo -->
+                </div>
+
+                <!-- social media nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation" >
+                    <ul id ="social media" class="nav navbar-nav">
+                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-facebook"></i><span></span></a>
+                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-linkedin"></i><span></span></a>
+                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-fire"></i><span></span></a>
+                    </ul>
+                </nav>
+                <!-- /social media nav -->
+                <!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation" >
+                    <ul id="nav" class="nav navbar-nav" >
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#portfolio">About us</a></li>
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="#business">BUSINESS</a></li>
+                                <li><a href="property">PROPERTY</a></li>
+                                <li><a href="property">IMMIGRATION</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#testimonials">Automated Ticket Appeal</a></li>
+                        <li><a href="#price">News</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </nav>
+                <!-- /main nav -->
+
+            </div>
+        </header>
+        <!--
+        End Fixed Navigation
+        ==================================== -->
+        <!---banner section-->
+        <div class="banner container">
+              <h1>Rivers Lawyers</h1>
+              <h2>Motto</h2>
+        </div>
+        <!--banner end-->
         <!-- Service section -->
+        <!--
         <section id="service">
             <div class="container">
                 <div class="row">
 
                     <div class="sec-title text-center">
-                        <h2 class="wow animated bounceInLeft">Service</h2>
-                        <p class="wow animated bounceInRight">The Key Features of our Job</p>
+                        <h2 class="wow">Services</h2>
+                        <p class="wow">Our Expertise</p>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn">
-                        <div class="service-item">
+                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
+                        <div class="service-item" data-toggle="collapse" data-target="#business-content">
                             <div class="service-icon">
                                 <i class="fa fa-bank fa-3x"></i>
                             </div>
                             <h3>Business</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.3s">
                         <div class="service-item">
                             <div class="service-icon">
-                                <i class="fa fa-tasks fa-3x"></i>
+                                <i class="fa fa-building fa-3x"></i>
                             </div>
                             <h3>Property</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.6s">
                         <div class="service-item">
                             <div class="service-icon">
-                                <i class="fa fa-clock-o fa-3x"></i>
+                                <i class="fa fa-users fa-3x"></i>
                             </div>
                             <h3>Immigration</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+        -->
+            <!--Collapsable Content Button--->
+            <div class="container" id = "service-navigation">
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
+                    <div class="service-item current" data-toggle="tab" data-target="#business-content">
+                        <a href =#><h3>Business</h3></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
+                    <div class="service-item" data-toggle="tab" data-target= "#property-content">
+                        <a href =#><h3>Property</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
+                    <div class="service-item" data-toggle="tab" data-target= "#immigration-content">
+                        <a href =#><h3>Immigration</h3></a>
+                    </div>
+                </div>
+            </div>
+            <!--content start--->
+            <div class="container services-panel tab-content">
+                <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade active in" id ="business-content">
+                    <div class="content-title">
+                      <a href=#><h1>Business</h1></a>
+                    </div>
+                    <div>
+                      <h2>We can help with your Business Law </h2>
+                      <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
+                      <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                      <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                      <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
+                      <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                      <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                      <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade in" id ="property-content">
+                    <div class="content-title">
+                      <h1>Property</h1>
+                    </div>
+                    <div>
+                      <h2>We can help with your Property Law.  </h2>
+                      <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
+                      <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                      <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                      <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
+                      <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                      <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                      <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade in" id ="immigration-content">
+                    <div class="content-title">
+                      <h1>Immigration </h1>
+                    </div>
+                    <div>
+                      <h2>We can help with your immigration Law. </h2>
+                      <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
+                      <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                      <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                      <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
+                      <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                      <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                      <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+                    </div>
+                </div>
+                <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel">
+                    <div class="title">
+                      <h2>Contact Us</h2>
+                    </div>
+                    <div class="contact-panel-content">
+                      <P> Kevin Kang</P>
+                      <P> Suite 609, 530 Little Collins Street, Melbourne VIC 3000</P>
+                      <P> Email: kevin.kang@riverslawyerse.com.au<P>
+                    </div>
+                </aside>
+            </div>
+            <!--content end--->
         <!-- end Service section -->
+        <!-- Javascript
+        ================================================== -->
+        <!-- Modernizer Script for old Browsers -->
+        <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+        <!-- jquery.js -->
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+        <!-- bootstrap.js -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <!-- RL_function.js -->
+        <script type="text/javascript" src="js/RL_function.js"></script>
+    </body>
