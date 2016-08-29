@@ -14,7 +14,6 @@ $(window).on("hashchange", function () {
 /* ========================================================================= */
 
 jQuery(window).load(function(){
-
 	$("#preloader").fadeOut("slow");
 });
 
