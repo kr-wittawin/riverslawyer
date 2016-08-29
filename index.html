@@ -42,13 +42,14 @@
 	
     <body id="body">
 
-		<!-- preloader -->
-		<div id="preloader">
+         <!-- preloader -->
+        <div id="preloader">
             <div class="loder-box">
-            	<div class="battery"></div>
+            	<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
             </div>
 		</div>
-		<!-- end preloader -->
+
 
         <!--
         Fixed Navigation
@@ -67,7 +68,7 @@
 
                     <!-- logo -->
                     <h1 class="navbar-brand">
-                        <a href="index.html#body"><img src="img/RL_Brand.png"  alt="RIVERS LAWYER"></a>
+                        <img src="img/RL_Brand.png"  alt="RIVERS LAWYER">
                     </h1>
                     <!-- /logo -->
                 </div>
@@ -77,20 +78,19 @@
                     <ul id ="social media" class="nav navbar-nav">
                         <li class="icon"><a href="http://www.facebook.com" role="button" target="_blank"><i class="fa fa-facebook"></i><span></span></a>
                         <li class="icon"><a href="http://www.linkedin.com" role="button" target="_blank"><i class="fa fa-linkedin"></i><span></span></a>
-                        <li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-                        <li class="icon"><a href="http://www.google.com" role="button" target="_blank"><i class="fa fa-fire"></i><span></span></a>
+                        <li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank"><i class="fa fa-whatsapp"></i><span></span></a></li>
+                        <li class="icon"><a href="http://www.instagram.com" role="button" target="_blank"><i class="fa fa-instagram"></i><span></span></a>
                     </ul>
                 </nav>
-                <!-- /social media nav -->
+                
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation" >
                     <ul id="nav" class="nav navbar-nav" >
-                        <li><a href="index.html#body">Home</a></li>
-						<li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#aboutus">About us</a></li>
-						<li><a href="index.html#news">News</a></li>
-                        <li><a href="#body">Automated Ticket Appeal</a></li>
-                        <li><a href="index.html#contact">Contact us</a></li>
+                        <li><a href="#body">Home</a></li>
+						<li><a class="externallink" href="services.html">Services</a></li>
+                        <li><a href="#aboutus">About us</a></li>
+						<li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -119,8 +119,18 @@
                         <h2 class="wow">Services</h2>
                         <p class="wow">Our Expertise</p>
                     </div>
+                    
+                    <div class="col-md-3 col-sm-6 col-xs-12  text-center wow animated fadeIn">
+                        <a href="form.html"><div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-car fa-3x"></i>
+                            </div>
+                            <h3>Parking Ticket Appeal</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div></a>
+                    </div></a>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn">
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated fadeIn">
                         <a href="services.html"><div class="service-item">
                             <div class="service-icon">
                                 <i class="fa fa-bank fa-3x"></i>
@@ -130,7 +140,7 @@
                         </div></a>
                     </div></a>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.3s">
+                    <div class="col-md-3 col-sm-6 col-xs-12  text-center wow animated fadeIn" data-wow-delay="0.3s">
                         <a href="services.html"><div class="service-item">
                             <div class="service-icon">
                                 <i class="fa fa-building fa-3x"></i>
@@ -140,7 +150,7 @@
                         </div>
                     </div></a>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated fadeIn" data-wow-delay="0.6s">
+                    <div class="col-md-3 col-sm-6 col-xs-12  text-center wow animated fadeIn" data-wow-delay="0.6s">
                         <a href="services.html"><div class="service-item">
                             <div class="service-icon">
                                 <i class="fa fa-users fa-3x"></i>
@@ -184,6 +194,8 @@
 								</div>
 								<h3>Topic1</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <a class="btn-xs btn-info" style="margin-top:5px;" href="#">
+                                <i class="fa fa-info-circle fa-1"></i> Read more</a>
 							</div></a>
 						</div></a>
 
@@ -194,6 +206,8 @@
 								</div>
 								<h3>Topic2</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <a class="btn-xs btn-info" style="margin-top:5px;" href="#">
+                                <i class="fa fa-info-circle fa-1"></i> Read more</a>
 							</div>
 						</div></a>
 
@@ -204,6 +218,8 @@
 								</div>
 								<h3>Topic3</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <a class="btn-xs btn-info" style="margin-top:5px;" href="#">
+                                <i class="fa fa-info-circle fa-1"></i> Read more</a>
 							</div></a>
 						</div>
                 </div>
@@ -219,7 +235,27 @@
 						<h2>Contact Us</h2>
 					</div>
 					
-					<div class="col-md-7 contact-form wow animated fadeInLeft">
+					
+					
+					<div class="col-md-5 wow animated fadeInLeft" > 
+						<address class="contact-details">
+							<h3>Contact Details</h3>					
+							<p><i class="fa fa-pencil"></i>Kevin Kang, Rivers Lawyers<span>Suite 609, 530 Little Collins St, Melbourne </span><span>Australia</span></p><br>
+							<p><i class="fa fa-phone"></i>+61 (0) 423 950 250</p>
+							<p><i class="fa fa-envelope"></i>kevin.kang@riverslawyers.com.au</p>
+						</address>
+						<!--<div class="footer-social">
+							<ul>
+								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-skype fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="0.9s"><a href="#"><i class="fa fa-dribbble fa-3x"></i></a></li>
+								<li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
+							</ul>
+						</div>-->
+					</div>
+
+                    <div class="col-md-5 contact-form wow animated fadeInRight">
 						<form action="#" method="post">
 							<div class="input-field">
 								<input type="text" name="name" class="form-control" placeholder="Your Name...">
@@ -236,24 +272,6 @@
 							<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
 						</form>
 					</div>
-					
-					<div class="col-md-5 wow animated fadeInRight">
-						<address class="contact-details">
-							<h3>Contact Us</h3>						
-							<p><i class="fa fa-pencil"></i>RiversLawyers<span>530 Little Collins St, Melbourne </span><span>Australia</span></p><br>
-							<p><i class="fa fa-phone"></i>+61 (0) 423 950 250  </p>
-							<p><i class="fa fa-envelope"></i>kevin.kang@riverslawyers.com.au</p>
-						</address><br><br>
-						<div class="footer-social">
-							<ul>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-skype fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.9s"><a href="#"><i class="fa fa-dribbble fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
-							</ul>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -268,7 +286,7 @@
 						<div class="wow animated fadeInDown">
 							<p>In development phase.</p>
 						</div>
-						<p>Design and Developed By Wittawin and Ben</p>
+						<p>Copyright Rivers Lawyers. All rights reserved. Design and Developed By Wittawin and Ben</p>
 					</div>
 				</div>
 			</div>
@@ -289,9 +307,10 @@
 		<!-- Owl Carousel -->
         <script src="js/owl.carousel.min.js"></script>
         <!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script> 
         <!-- Fullscreen slider -->
         <script src="js/jquery.slitslider.js"></script>
+
         <script src="js/jquery.ba-cond.min.js"></script>
 		<!-- onscroll animation -->
         <script src="js/wow.min.js"></script>

@@ -41,13 +41,13 @@
 
     <body id="body">
 
-        <!-- preloader -->
+         <!-- preloader -->
         <div id="preloader">
             <div class="loder-box">
-                <div class="battery"></div>
+            	<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
             </div>
-        </div>
-        <!-- end preloader -->
+		</div>
 
         <!--
         Fixed Navigation
@@ -66,7 +66,7 @@
 
                     <!-- logo -->
                     <h1 class="navbar-brand">
-                        <a href="index.html#body"><img src="img/RL_Brand.png"  alt="RIVERS LAWYER"></a>
+                        <img src="img/RL_Brand.png"  alt="RIVERS LAWYER">
                     </h1>
                     <!-- /logo -->
                 </div>
@@ -74,29 +74,21 @@
                 <!-- social media nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation" >
                     <ul id ="social media" class="nav navbar-nav">
-                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-facebook"></i><span></span></a>
-                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-linkedin"></i><span></span></a>
-                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-                        <li class="icon"><a href="#" role="button" target="_blank"><i class="fa fa-fire"></i><span></span></a>
+                        <li class="icon"><a href="http://www.facebook.com" role="button" target="_blank"><i class="fa fa-facebook"></i><span></span></a>
+                        <li class="icon"><a href="http://www.linkedin.com" role="button" target="_blank"><i class="fa fa-linkedin"></i><span></span></a>
+                        <li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank"><i class="fa fa-whatsapp"></i><span></span></a></li>
+                        <li class="icon"><a href="http://www.instagram.com" role="button" target="_blank"><i class="fa fa-instagram"></i><span></span></a>
                     </ul>
                 </nav>
                 <!-- /social media nav -->
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation" >
                     <ul id="nav" class="nav navbar-nav" >
-                        <li><a href="index.html#body">Home</a></li>
-                        <li><a href="#portfolio">About us</a></li>
-                        <li class="dropdown active">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                <li><a href="#business">BUSINESS</a></li>
-                                <li><a href="property">PROPERTY</a></li>
-                                <li><a href="property">IMMIGRATION</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#testimonials">Automated Ticket Appeal</a></li>
-                        <li><a href="#price">News</a></li>
-                        <li><a href="#contact">Contact us</a></li>
+                        <li><a class="externallink" href="index.html#body">Home</a></li>
+						<li><a href="services.html">Services</a></li>
+                        <li><a class="externallink" href="index.html#aboutus">About us</a></li>
+						<li><a class="externallink" href="index.html#news">News</a></li>
+                        <li><a class="externallink" href="index.html#contact">Contact us</a></li>
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -156,18 +148,18 @@
             <!--Collapsable Content Button--->
             <div class="container" id = "service-navigation">
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
-                    <div class="service-item current" data-toggle="tab" data-target="#business-content">
+                    <div class="service-menu current" data-toggle="tab" data-target="#business-content">
                         <a href =#><h3>Business</h3></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
-                    <div class="service-item" data-toggle="tab" data-target= "#property-content">
+                    <div class="service-menu" data-toggle="tab" data-target= "#property-content">
                         <a href =#><h3>Property</h3></a>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center wow animated fadeIn">
-                    <div class="service-item" data-toggle="tab" data-target= "#immigration-content">
+                    <div class="service-menu" data-toggle="tab" data-target= "#immigration-content">
                         <a href =#><h3>Immigration</h3></a>
                     </div>
                 </div>
@@ -176,7 +168,7 @@
             <div class="container services-panel tab-content">
                 <div class="col-md-8 col-sm-6 col-xs-12 tab-pane fade active in" id ="business-content">
                     <div class="content-title">
-                      <a href=#><h1>Business</h1></a>
+                      <h1>Business</h1>
                     </div>
                     <div>
                       <h2>We can help with your Business Law </h2>
@@ -222,19 +214,36 @@
                       <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
                     </div>
                 </div>
-                <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel" style="height:100%">
+
+                <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel">
                     <div class="title">
                       <h2>Contact Us</h2>
                     </div>
                     <div class="contact-panel-content">
-                      <P> Kevin Kang</P>
+                      <P> Kevin Kang, Rivers Lawyers</P>
                       <P> Suite 609, 530 Little Collins Street, Melbourne VIC 3000</P>
+                      <P> Phone: +61 (0) 423 950 250</P>
                       <P> Email: kevin.kang@riverslawyerse.com.au<P>
                     </div>
                 </aside>
+
             </div><br><br>
             <!--content end--->
         <!-- end Service section -->
+
+        <footer id="footer">
+			<div class="container">
+				<div class="row text-center">
+					<div class="footer-content">
+						<div class="wow animated fadeInDown">
+							<p>In development phase.</p>
+						</div>
+						<p>Copyright Rivers Lawyers. All rights reserved. Design and Developed By Wittawin and Ben</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
         <!-- Javascript
         ================================================== -->
         <!-- Modernizer Script for old Browsers -->

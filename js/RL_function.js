@@ -1,5 +1,10 @@
-$('.service-item').on('click', function(e){
-    console.log('1234');
+
+/*
+*   service menu jquery
+*/
+$('.service-menu').on('click', function(e){
     $('.current').removeClass('current');
    $(this).addClass('current');
-   });
+});
+
+

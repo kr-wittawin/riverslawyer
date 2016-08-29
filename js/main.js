@@ -5,7 +5,9 @@
 
 $(window).on("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 100);
-});
+}); 
+
+
 
 /* ========================================================================= */
 /*	Preloader
@@ -14,7 +16,6 @@ $(window).on("hashchange", function () {
 jQuery(window).load(function(){
 
 	$("#preloader").fadeOut("slow");
-
 });
 
 /* ========================================================================= */
@@ -97,11 +98,11 @@ $(document).ready(function(){
 	/* ========================================================================= */
 
 	jQuery('#nav').singlePageNav({
-		offset: jQuery('#nav').outerHeight(),
-		filter: ':not(.external)',
+		offset: jQuery('#navigation').outerHeight(),
+		filter: ':not(.externallink)',
 		speed: 2000,
 		currentClass: 'current',
-		easing: 'easeInOutExpo',
+		easing: 'swing',
 		updateHash: true,
 		beforeStart: function() {
 			console.log('begin scrolling');

@@ -296,7 +296,7 @@ h1.navbar-brand {
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-border-bottom: 2px solid #B2BEB5;
+    border-bottom: 2px solid #B2BEB5;
 }
 .navbar-brand img {
     position:absolute;
@@ -587,6 +587,7 @@ border-bottom: 2px solid #B2BEB5;
     height: 85px;
     width: 85px;
     line-height: 101px;
+    margin-bottom: 7px;
 
     -webkit-transform: rotate(47deg);
        -moz-transform: rotate(47deg);
@@ -603,7 +604,6 @@ border-bottom: 2px solid #B2BEB5;
 
 .service-item:hover .service-icon {
     border: 3px solid #009ee3;
-    margin-bottom: 20px;
     color: #009ee3;
 }
 
@@ -622,17 +622,18 @@ border-bottom: 2px solid #B2BEB5;
     text-transform: uppercase;
 }
 
-.service-item:hover{
+.service-menu:hover{
     border-bottom: 2px solid #B2BEB5;
 }
 
-.service-item.current{
+.service-menu.current{
     border-bottom: 2px solid #B2BEB5;
 }
 
 .contact-panel {
     background-color: #b2beb5;
-    height:100%;
+    min-height:100%;
+    height:350px;
 }
 
 .contact-panel h2, .contact-panel p {
