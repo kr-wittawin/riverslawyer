@@ -3,23 +3,32 @@
 
 /*basic reset*/
 * {margin: 0; padding: 0;}
-
+/*background*/
 html {
-	height: 100%;
-	/*Image only BG fallback*/
-	background-color:grey;
-	/*background = gradient + image pattern combo*/
-	background:
-		linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),
-		;
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	font-family: montserrat, arial, verdana;
+	background: rgba(245,245,242,1);
+	background: -moz-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,245,242,1)), color-stop(100%, rgba(54,52,54,1)));
+	background: -webkit-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: -o-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: -ms-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: linear-gradient(to bottom, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f2', endColorstr='#363436', GradientType=0 );
 }
 
-body {
-	font-family: montserrat, arial, verdana;
-}
 /*form styles*/
 #msform {
-	width: 600px;
+	width: auto;
+	max-width:600px;
+	min-width:300px;
+	height: auto;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -27,14 +36,12 @@ body {
 #msform fieldset {
 	background: white;
 	border: 0 none;
-	border-radius: 3px;
+	border-radius: 8px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	padding: 20px 30px;
-
+	margin: 0 10%;
 	box-sizing: border-box;
 	width: 80%;
-	margin: 0 10%;
-
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
@@ -42,6 +49,7 @@ body {
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
+
 /*inputs*/
 #msform input, #msform textarea {
 	padding: 15px;
@@ -54,12 +62,12 @@ body {
 	color: #2C3E50;
 	font-size: 13px;
 }
-/*buttons*/
 
-.infringement_option input {
+/*buttons*/
+.infringement_reason input {
     visibility:hidden;
 }
-.infringement_option label {
+.infringement_reason label {
     cursor: pointer;
 	background: #2C3E50;
 	font-weight: bold;
@@ -67,14 +75,21 @@ body {
 	border: 0 none;
 	border-radius: 1px;
 	cursor: pointer;
-	padding: 10px 5px;
+	padding: 10px 20px;
 	margin: 10px 5px;
 }
-.infringement_option input:checked + label {
+.infringement_reason input:checked + label {
     background: #0077BE;
 	border-width: 2px;
 	border-style:solid;
 	border-color: black;
+}
+
+.error{
+	color:red !important;
+	position: relative;
+	top:12px;
+
 }
 
 #msform .action-button {
@@ -91,6 +106,7 @@ body {
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+
 /*headings*/
 .fs-title {
 	font-size: 15px;
@@ -104,6 +120,7 @@ body {
 	color: #666;
 	margin-bottom: 20px;
 }
+
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
@@ -115,22 +132,24 @@ body {
 	list-style-type: none;
 	color: white;
 	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
+	font-size:11px;
+	/*width controls number of steps in the progressbar*/
+	width: 25%;
 	float: left;
 	position: relative;
 }
+/*progressbar step counter*/
 #progressbar li:before {
 	content: counter(step);
 	counter-increment: step;
+	color: #333;
+	background: white;
 	width: 20px;
 	line-height: 20px;
 	display: block;
-	font-size: 10px;
-	color: #333;
-	background: white;
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
+	font-size: 10px;
 }
 /*progressbar connectors*/
 #progressbar li:after {

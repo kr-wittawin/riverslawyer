@@ -17,56 +17,69 @@
 	<!-- Main Stylesheet -->
 	<link rel="stylesheet" href="css/form_deco.css">
 
-	
+
+
 </head>
+<body>
+	<div class = "container">
+			<a href="index.html">
+			<i class="fa fa-home fa-3x" aria-hidden="true" style="margin:20px 0px 0px 20px"></i>
+			</a>
 
-<a href="index.html">
-<i class="fa fa-home fa-3x" aria-hidden="true" style="margin:20px 0px 0px 20px"></i></a>
-
-<!-- multistep form -->
-<form id="msform">
-	<!-- progressbar -->
-	<ul id="progressbar">
-		<li class="active">Parking Infringement Reason</li>
-		<li>Infringement Details</li>
-		<li>Form</li>
-	</ul>
-	<!-- fieldsets -->
-	<fieldset>
-		<div class= "infringement_option">
-			<h2 class="fs-title">Choose the Infringment Review Reason</h2>
-			<h3 class="fs-subtitle">This is step 1</h3>
-	        <input type='radio' value='1' name='radio' id='radio1'/>
-	        <label for='radio1'>Option 1</label></br>
-	        <input type='radio' value='2' name='radio'  id='radio2'/>
-	        <label for='radio2'>Option  2</label></br>
-	        <input type='radio' value='3' name='radio'  id='radio3'/>
-	        <label for='radio3'>Option 3</label></br>
-		</div>
-			<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Personal Details</h2>
-		<h3 class="fs-subtitle">Please fill in your details</h3>
-		<input type="text" name="firstName" placeholder="Name" />
-		<input type="text" name="lastName" placeholder="Last Name" />
-		<input type="text" name="infrigementNo" placeholder="Infringement Number" />
-		<textarea name="address" placeholder="Address"></textarea>
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Submit and Donate" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Published Form</h2>
-		<h3 class="fs-subtitle">Please copy and paste into your letter</h3>
-		<p> letter would appear here </p>
-		<input type="button" name="previous" class="previous action-button" value="Edit Details" />
-		<input type="submit" name="submit" class="submit action-button" value="Close" />
-	</fieldset>
-</form>
-
-<!-- jQuery -->
-<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
-<!-- jquery easing -->
-<script src="js/jquery.easing.min.js"></script> 
-<!--form_function.js-->
-<script src="js/form_function.js" type="text/javascript"></script>
+		<!-- multistep form -->
+		<form id="msform" id ="parkingReviewForm">
+			<!-- progressbar -->
+			<ul id="progressbar">
+				<li class="active">Parking Infringement Reason</li>
+				<li>Personal Details</li>
+				<li>Donate</li>
+				<li>Form</li>
+			</ul>
+			<!-- fieldsets -->
+			<fieldset>
+					<h2 class="fs-title">Choose the Infringement Review Reason</h2>
+					<h3 class="fs-subtitle">Tell us the reason</h3>
+					<div class="infringement_reason">
+			        <input type='radio' name='infringementOption' id='infringement1' value='1'/>
+			        <label for='infringement1'>Option 1</label></br>
+			        <input type='radio' name='infringementOption'  id='infringement2'/ value='2' />
+			        <label for='infringement2'>Option  2</label></br>
+			        <input type='radio'  name='infringementOption'  id='infringement3' value='3' />
+			        <label for='infringement3'>Option 3</label></br>
+					</div></br>
+					<input type="button" name="next" class="next action-button" value="Next" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-title">Personal Details</h2>
+				<h3 class="fs-subtitle">Please fill in your details</h3>
+				<input type="text" name="firstname" id="firstname" placeholder="First Name" />
+				<input type="text" name="lastName" id = "lastname" placeholder="Last Name" />
+				<input type="text" name="infrigementNo" placeholder="Infringement Number" />
+				<textarea name="address" placeholder="Address"></textarea>
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+				<input type="button" name="next" class="next action-button" value="Submit" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-title">Donate</h2>
+				<h3 class="fs-subtitle">You can donate to us via Paypal</h3>
+				<input type="button" name="previous" class="previous action-button" value="Edit Details" />
+				<input type="button" name="next" class="next action-button" value="Submit and Donate" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-title">Published Form</h2>
+				<h3 class="fs-subtitle">Please copy and paste into your letter</h3>
+				<p> letter would appear here </p>
+				<input type="button" name="previous" class="previous action-button" value="Edit Details" />
+				<input type="submit" name="submit" class="submit action-button" value="Close" />
+			</fieldset>
+		</form>
+	</div>
+	<!-- jQuery -->
+	<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+	<!-- jquery easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!--jquery.validation.js-->
+	<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+	<!--form_function.js-->
+	<script src="js/form_function.js" type="text/javascript"></script>
+</body>
