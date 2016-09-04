@@ -3,27 +3,42 @@ $(document).ready(function() {
 	var current_fs, next_fs, previous_fs; //fieldsets
 	var left, opacity, scale; //fieldset properties which we will animate
 	var animating; //flag to prevent quick multi-click glitches
+ 	// initialize tooltipster on text input elements
+
+	$('#msform input[type="text"], #msform input[type="radio"]').tooltipster({
+        trigger: 'custom',
+        onlyOne: false,
+        position: 'right'
+    });
 
 	$(".next").click(function(){
-
+		// initialize validate plugin on the form
 		$('#msform').validate({
+			errorPlacement: function (error, element) {
+
+            var lastError = $(element).data('lastError'),
+                newError = $(error).text();
+
+            $(element).data('lastError', newError);
+			// check if newError is equal to lastError
+            if (newError !== '' && newError !== lastError) {
+                $(element).tooltipster('content', newError);
+                $(element).tooltipster('show');
+            }
+
+        },
+        success: function (label, element) {
+            $(element).tooltipster('hide');
+        },
 			rules: {
-				infringementOption: {required: true}
+				infringementOption: {required: true},
+				firstName: {required: true},
+				lastName: {required: true},
+				infringementNo:{required: true}
 			},
 			messages: {
-				infringementOption: {required:"Please pick an infringement reason"},
-			},
-			errorPlacement: function(error, element)
-				{
-					if ( element.is(":radio") )
-					{
-						error.insertAfter( element.parents('.infringement_reason') );
-					}
-					else
-					{ // This is the default behavior
-						error.insertAfter( element );
-					}
-				}
+				infringementOption: {required:"Please Select an Infringement Reason"}
+			}
 			});
 
 		if ((!$('#msform').valid())) {
@@ -67,6 +82,8 @@ $(document).ready(function() {
 	});
 
 	$(".previous").click(function(){
+		$('#msform input[type="text"]').tooltipster('hide');
+		$('#msform input[type="text"]').removeClass('error');
 		if(animating) return false;
 		animating = true;
 
