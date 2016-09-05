@@ -85,7 +85,7 @@ body {
 	border-color: black;
 }
 
-.error{
+#infringementOption-error{
 	color:red !important;
 	position: relative;
 	top:12px;
