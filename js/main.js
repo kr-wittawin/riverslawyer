@@ -7,7 +7,7 @@ $('.nav a').click(function() {
   $('.navbar-collapse').collapse('hide');
 });
 
-$(document).click(function (event) {
+$(document).on("click touchstart",function (event) {
     var clickover = $(event.target);
     var _opened = $('.navbar-collapse').hasClass("in");
     if (_opened === true && !clickover.hasClass("navbar-collapse")) {
@@ -27,18 +27,55 @@ $('.service-menu').on('click', function(e){
 /*	page transition
 /* ========================================================================= */
 
+$("#business").on('click', function(e){
+    window.location.href = "expertise.html";
+    window.location = "expertise.html?tab=business";
+});
+$("#property").on('click', function(e){
+    window.location.href = "expertise.html";
+    window.location = "expertise.html?tab=property";
+});
+$("#immigration").on('click', function(e){
+    window.location.href = "expertise.html";
+    window.location = "expertise.html?tab=immigration";
+});
+$("#litigation").on('click', function(e){
+    window.location.href = "expertise.html";
+    window.location = "expertise.html?tab=litigation";
+});
+
+
 $(window).on("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 100);
 });
 
-
-
-/* ========================================================================= */
-/*	Preloader
-/* ========================================================================= */
+function getParameterByName(name) 
+{
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 jQuery(window).load(function(){
-	$("#preloader").fadeOut("slow");
+	if(getParameterByName('tab') == 'property')
+    {
+        $("#property-menu").addClass("current");
+        $("#property-content").addClass("active");
+    }
+    if(getParameterByName('tab') == 'business')
+    {
+        $("#business-menu").addClass("current");
+        $("#business-content").addClass("active");
+    }if(getParameterByName('tab') == 'immigration')
+    {
+        $("#immigration-menu").addClass("immigration");
+        $("#immigration-content").addClass("active");
+    }if(getParameterByName('tab') == 'litigation')
+    {
+        $("#litigation-menu").addClass("current");
+        $("#litigation-content").addClass("active");
+    }
 });
 
 /* ========================================================================= */
