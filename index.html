@@ -21,9 +21,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
 		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
 		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
 		<!-- bootstrap.min -->
         <link rel="stylesheet" href="css/slit-slider.css">
 		<!-- bootstrap.min -->
@@ -65,11 +65,21 @@
                 <div class = "hidden-sm hidden-xs hidden-md visible-lg">
                 <nav class="collapse navbar-collapse navbar-right" role="navigation" >
                     <ul id ="social-media" class="nav navbar-nav">
-                        <li class="icon"><a href="http://www.facebook.com" role="button" target="_blank"><i class="fa fa-facebook fa-border"></i><span></span></a>
-                        <li class="icon"><a href="http://www.twitter.com" role="button" target="_blank"><i class="fa fa-twitter fa-border"></i><span></span></a>
-                        <li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank"><i class="fa fa-whatsapp fa-border"></i><span></span></a>
-                        <li class="icon"><a href="http://www.instagram.com" role="button" target="_blank"><i class="fa fa-instagram fa-border"></i><span></span></a>
-                        <li class="icon"><a href="#" role="button" target="_blank"><img src = "img/kakaotalk.png" alt="kakaotalk"><span></span></a>
+                        <li class="icon"><a href="http://www.facebook.com" role="button" target="_blank">
+                            <i class="fa fa-facebook"></i><span></span>
+                        </a></li>
+                        <li class="icon"><a href="http://www.twitter.com" role="button" target="_blank">
+                            <i class="fa fa-twitter"></i><span></span>
+                        </a></li>
+                        <li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank">
+                            <i class="fa fa-whatsapp"></i><span></span>
+                        </a></li>
+                        <li class="icon"><a href="http://www.instagram.com" role="button" target="_blank">
+                            <i class="fa fa-instagram"></i><span></span>
+                        </a></li>
+                        <li class="icon"><a href="#" role="button" target="_blank">
+                            <img src = "img/kakaotalk.png" alt="kakaotalk"><span></span>
+                        </a></li>
                     </ul>
                 </nav>
                 </div>
@@ -312,9 +322,9 @@
                         </form>
                     </div>
 
-                    <div class="col-md-1 hidden-xs"></div>
+                    <div class="col-md-1 hidden-xs hidden-sm"></div>
                     
-                    <div class="col-md-5 col-sm-4 col-xs-12 wow animated fadeInLeft" >
+                    <div class="col-md-5 col-sm-7 col-xs-12 wow animated fadeInLeft" >
 						<address class="contact-details">
 							<h3>Contact Details</h3>
 							<p><i class="fa fa-pencil"></i>Rivers Lawyers<span>Suite 609, 530 Little Collins St,</br> Victoria 3000 </span><span>Australia</span></p><br>
@@ -322,16 +332,26 @@
 						</address><br>
 						<div class="footer-social">
 							<ul>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-facebook fa-border fa-3x"></i></a></li>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-twitter fa-border fa-3x"></i></a></li>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-whatsapp fa-border fa-3x"></i></a></li>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-instagram fa-border fa-3x"></i></a></li>
-                                <li class="wow animated zoomIn"><a href="#" role="button" target="_blank"><img src = "img/kakaotalk.png" alt="kakaotalk"><span></span></a></li>
+								<li class="wow animated zoomIn"><a href="#">
+                                    <i class="fa fa-facebook fa-border fa-3x"></i>
+                                </a></li>
+								<li class="wow animated zoomIn"><a href="#">
+                                    <i class="fa fa-twitter fa-border fa-3x"></i>
+                                </a></li>
+								<li class="wow animated zoomIn"><a href="#">
+                                    <i class="fa fa-whatsapp fa-border fa-3x"></i>
+                                </a></li>
+								<li class="wow animated zoomIn"><a href="#">
+                                    <i class="fa fa-instagram fa-border fa-3x"></i>
+                                </a></li>
+                                <li class="wow animated zoomIn"><a href="#" role="button" target="_blank">
+                                    <img src = "img/kakaotalk.png" alt="kakaotalk"><span></span>
+                                </a></li>
 							</ul>
 						</div>
 					</div><br class="visible-xs"><br class="visible-xs">
 
-                    <div class="col-md-1 hidden-xs"></div>
+                    <div class="col-md-1 hidden-xs hidden-sm"></div>
 
 				</div>
 			</div>
@@ -355,6 +375,8 @@
 
 		<!-- Essential jQuery Plugins
 		================================================== -->
+        <!-- Modernizer Script for old Browsers -->
+        <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
 		<!-- Main jQuery -->
         <script src="js/jquery-1.11.1.min.js"></script>
 		<!-- Twitter Bootstrap -->
