@@ -241,30 +241,6 @@ main > section {
   width: 128px;
 }
 
-.battery{
-    width: 60px;
-    height: 25px;
-    top: 35%;
-    border: 1px #2E2E2E solid;
-    border-radius: 2px;
-    position: relative;
-    -webkit-animation: charge 5s linear infinite;
-       -moz-animation: charge 5s linear infinite;
-            animation: charge 5s linear infinite;
-    margin: 0 auto;
-}
-
-.battery:after {
-  background-color: #2E2E2E;
-  border-radius: 0 1px 1px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: -5px;
-  top: 7px;
-  width: 3px;
-}
-
 @-webkit-keyframes charge{
     0%{box-shadow: inset 0px 0px 0px #2E2E2E;}
     100%{box-shadow: inset 60px 0px 0px #2E2E2E;}
@@ -338,11 +314,6 @@ h1.navbar-brand {
 
 /*	Social Network
 /* ==========================================*/
-.footer-social i {
-    height: 60px;
-    width: 60px;
-}
-
 .fa-facebook {
     background-color:#3b5998;
     color:white;
@@ -367,6 +338,7 @@ h1.navbar-brand {
 .nav>li>a>i {
     height: 20px;
     width: 20px;
+    padding: 2px;
     text-align: center;
 }
 .nav>li>a>img {
@@ -375,15 +347,20 @@ h1.navbar-brand {
     width: 20px;
     text-align: center;
 }
+.footer-social i {
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+}
 .footer-social img {
-    margin-top: -35px;
+    margin-top: -25px;
     height: 60px;
     width: 60px;
     text-align: center;
 }
 @media (max-width: 767px) {
     .footer-social img {
-        margin-top: -20px;
+        margin-top: -15px;
         height: 60px;
         width: 60px;
         text-align: center;
@@ -571,7 +548,7 @@ h1.navbar-brand {
 } */
 
 
-/* Project laughtbox setup */
+/* Project laughtbox setup 
 
 .fancybox-item.fancybox-close {
     background: url("../img/icons/close.png") no-repeat scroll 0 0 transparent;
@@ -593,7 +570,7 @@ h1.navbar-brand {
     height: 50px;
     width: 50px;
     left: 0;
-}
+} */
 
 /*=================================================================
 	About
