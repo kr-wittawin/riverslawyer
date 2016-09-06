@@ -1,12 +1,27 @@
 
 /* ========================================================================= 
+*   nav-bar jquery
+* ========================================================================= */
+
+$('.nav a').click(function() {
+  $('.navbar-collapse').collapse('hide');
+});
+
+$(document).click(function (event) {
+    var clickover = $(event.target);
+    var _opened = $('.navbar-collapse').hasClass("in");
+    if (_opened === true && !clickover.hasClass("navbar-collapse")) {
+        $('.navbar-collapse').collapse('hide');
+    }
+});
+
+/* ========================================================================= 
 *   service menu jquery
 * ========================================================================= */
 $('.service-menu').on('click', function(e){
     $('.current').removeClass('current');
    $(this).addClass('current');
 });
-
 
 /* ========================================================================= */
 /*	page transition

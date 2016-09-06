@@ -336,7 +336,7 @@ h1.navbar-brand {
 .nav>li>a>i {
     height: 20px;
     width: 20px;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
 }
 .nav>li>a>img {
@@ -357,6 +357,13 @@ h1.navbar-brand {
     width: 55px;
     text-align: center;
 }
+
+@media (min-width: 375px){
+    .small-service {
+        display: none !important;
+    }
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
     .footer-social img {
         margin-top: -20px;
@@ -367,16 +374,19 @@ h1.navbar-brand {
 }
 
 @media (max-width: 374px) {
+    .big-service {
+        display: none !important;
+    }
     .footer-social img {
-        margin-top: -23px;
-        height: 46px;
-        width: 46px;
+        margin-top: -8px;
+        height: 36px;
+        width: 36px;
         text-align: center;
     }
     .footer-social i {
-        height: 50px;
-        width: 50px;
-        padding: 1px;
+        height: 40px;
+        width: 40px;
+        padding: 3px;
     }
 }
 
@@ -1218,8 +1228,7 @@ textarea.form-control {
 @media (max-width: 374px) {
     .footer-social ul li {
         display: inline-block;
-        margin:0;
-        width: 15%;
+        width: 10%;
     }
 }
 
