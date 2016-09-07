@@ -18,9 +18,10 @@ $(document).on("click touchstart",function (event) {
 /* ========================================================================= 
 *   service menu jquery
 * ========================================================================= */
+
 $('.service-menu').on('click', function(e){
     $('.current').removeClass('current');
-   $(this).addClass('current');
+    $(this).addClass('current');
 });
 
 /* ========================================================================= */
