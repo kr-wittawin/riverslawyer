@@ -117,7 +117,32 @@ $(document).ready(function() {
 			easing: 'easeInOutBack'
 		});
 	});
+	$(".submit").click(function() {
+		var chosenInfOption = $('input[name="infringementOption"]:checked').val();
+		var infOptReason = $('input[name="infringementOption"]:checked').next('label:first').text();
+		var firstName = $('#firstName') .val();
+		var lastName = $('#lastName').val();
+		var InfNo = $('#infNo').val();
+		switch (chosenInfOption) {
+			case '1':
+			$('#letterOutput').html(function() {
+				return "No. 1" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
+			});
+			break;
+			case '2':
+			$('#letterOutput').html(function() {
+				return "No. 2" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
+			});
+			break;
+			case '3':
+			$('#letterOutput').html(function() {
+				return "No. 3" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
+			});
+		}
+
+	});
 });
+
 /*
 $("#parkingReviewForm").validate({
 	rules: {
