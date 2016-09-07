@@ -46,7 +46,7 @@
 			        <input type='radio' name='infringementOption' id='infringement1' value='1'/>
 			        <label for='infringement1'>Option 1</label></br>
 			        <input type='radio' name='infringementOption'  id='infringement2'/ value='2' />
-			        <label for='infringement2'>Option  2</label></br>
+			        <label for='infringement2'>Option 2</label></br>
 			        <input type='radio'  name='infringementOption'  id='infringement3' value='3' />
 			        <label for='infringement3'>Option 3</label></br>
 					</div></br>
@@ -56,9 +56,9 @@
 				<h2 class="fs-title">Personal Details</h2>
 				<h3 class="fs-subtitle">Please fill in your details</h3>
 				<div class = "personal_detail">
-				<input type="text" name="firstName" id="firstname" placeholder="First Name" />
-				<input type="text" name="lastName" id = "lastname" placeholder="Last Name" />
-				<input type="text" name="infringementNo" placeholder="Infringement Notice Number" />
+				<input type="text" name="firstName" id= "firstName" placeholder="First Name" />
+				<input type="text" name="lastName" id = "lastName" placeholder="Last Name" />
+				<input type="text" name="infringementNo" id = "infNo" placeholder="Infringement Notice Number" />
 				<textarea name="address" placeholder="Address"></textarea>
 				</div>
 				<input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -68,14 +68,14 @@
 				<h2 class="fs-title">Donate</h2>
 				<h3 class="fs-subtitle">You can donate to us via Paypal</h3>
 				<input type="button" name="previous" class="previous action-button" value="Edit Details" />
-				<input type="button" name="next" class="next action-button" value="Submit and Donate" />
+				<input type="button" name="next" class="submit next action-button" value="Submit and Donate" />
 			</fieldset>
 			<fieldset>
 				<h2 class="fs-title">Published Form</h2>
 				<h3 class="fs-subtitle">Please copy and paste into your letter</h3>
-				<p> letter would appear here </p>
+				<p id = "letterOutput"> Something went wrong. Letter did not appear </p>
 				<input type="button" name="previous" class="previous action-button" value="Edit Details" />
-				<input type="submit" name="submit" class="submit action-button" value="Close" />
+				<a href = "index.html"><input type="button" class="action-button" value="Return to home page" /> </a>
 			</fieldset>
 		</form>
 	</div>
