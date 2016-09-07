@@ -27,6 +27,7 @@ $('.service-menu').on('click', function(e){
 /*	page transition
 /* ========================================================================= */
 
+
 $("#business").on('click', function(e){
     window.location.href = "expertise.html";
     window.location = "expertise.html?tab=business";
@@ -44,11 +45,6 @@ $("#litigation").on('click', function(e){
     window.location = "expertise.html?tab=litigation";
 });
 
-
-$(window).on("hashchange", function () {
-    window.scrollTo(window.scrollX, window.scrollY - 100);
-});
-
 function getParameterByName(name) 
 {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -57,24 +53,38 @@ function getParameterByName(name)
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+/* when page load */
 jQuery(window).load(function(){
+    /* select menu after loads */
+    if(getParameterByName('tab') == 'aboutus')
+    {
+        $('.navbar-nav li a[href$="#aboutus"]').click()
+    } else if(getParameterByName('tab') == 'news') {
+        $('.navbar-nav li a[href$="#news"]').click()
+    } else if(getParameterByName('tab') == 'contactus'){
+        $('.navbar-nav li a[href$="#contactus"]').click()
+    } 
+
+    /* select service */
 	if(getParameterByName('tab') == 'property')
     {
         $("#property-menu").addClass("current");
         $("#property-content").addClass("active");
-    }
-    if(getParameterByName('tab') == 'business')
+    } else if(getParameterByName('tab') == 'business')
     {
         $("#business-menu").addClass("current");
         $("#business-content").addClass("active");
-    }if(getParameterByName('tab') == 'immigration')
+    } else if(getParameterByName('tab') == 'immigration')
     {
-        $("#immigration-menu").addClass("immigration");
+        $("#immigration-menu").addClass("current");
         $("#immigration-content").addClass("active");
-    }if(getParameterByName('tab') == 'litigation')
+    } else if(getParameterByName('tab') == 'litigation')
     {
         $("#litigation-menu").addClass("current");
         $("#litigation-content").addClass("active");
+    } else {
+        $("#business-menu").addClass("current");
+        $("#business-content").addClass("active");
     }
 });
 
@@ -158,7 +168,7 @@ $(document).ready(function(){
 	/* ========================================================================= */
 
 	jQuery('#nav').singlePageNav({
-		offset: jQuery('#navigation').outerHeight(),
+		offset: jQuery('#navigation').outerHeight() + 20,
 		filter: ':not(.externallink)',
 		speed: 2000,
 		currentClass: 'current',
