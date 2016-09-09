@@ -296,18 +296,18 @@ h1.navbar-brand {
 }
 .navbar-brand img {
     position:absolute;
-    top:13px;
-    width: 100px;
-    height:auto;
+    top: 15px;
+    width: 80px;
+    height: auto;
 }
 
 .navbar-fixed-top {
-    min-height: 80px;
+    min-height: 110px;
 }
 
 .navbar-fixed-top .navbar-collapse {
     max-height: 260px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 /*	Social Network
@@ -340,7 +340,7 @@ h1.navbar-brand {
     text-align: center;
 }
 .nav>li>a>img {
-    margin-top: -5px;
+    margin-top: -3px;
     height: 20px;
     width: 20px;
     text-align: center;
@@ -352,9 +352,9 @@ h1.navbar-brand {
 }
 
 .footer-social img {
-    margin-top: -30px;
-    height: 55px;
-    width: 55px;
+    margin-top: -22px;
+    height: 60px;
+    width: 60px;
     text-align: center;
 }
 
@@ -392,7 +392,6 @@ h1.navbar-brand {
 
 .fa-border2 {
   padding: .2em .25em .15em;
-  border: solid 0.08em #999999;
   border-radius: .2em;
 }
 
@@ -577,7 +576,7 @@ h1.navbar-brand {
 } */
 
 
-/* Project laughtbox setup 
+/* Project laughtbox setup
 
 .fancybox-item.fancybox-close {
     background: url("../img/icons/close.png") no-repeat scroll 0 0 transparent;
@@ -709,16 +708,16 @@ h1.navbar-brand {
     margin-bottom: 20px;
 }
 .service-item h3 {
-    font-size: 20px;
+    font-size: 19px;
     text-transform: uppercase;
 }
 
 .service-menu:hover{
-    border-bottom: 2px solid #B2BEB5;
+    border-bottom: 2px solid black;
 }
 
 .service-menu.current{
-    border-bottom: 2px solid #B2BEB5;
+    border-bottom: 2px solid black;
 }
 
 .contact-panel h2, .contact-panel p {
@@ -726,343 +725,11 @@ h1.navbar-brand {
 }
 
 .service-panel {
-    background-color: #999999;
+    background-color: #393939;
 }
 
 .service-content {
     background-color:white;
-}
-
-/*=================================================================
-	Portfolio
-==================================================================*/
-
-.project-wrapper {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.project-wrapper li {
-    display: inline-block;
-}
-
-.portfolio-item {
-    cursor: pointer;
-    margin: 0 1% 1% 0;
-    overflow: hidden;
-    position: relative;
-    width: 32%;
-}
-
-figcaption.mask {
-    background-color: rgba(54, 55, 50, 0.79);
-    bottom: -126px;
-    color: #fff;
-    padding: 25px;
-    position: absolute;
-    width: 100%;
-    text-align: left;
-
-    -webkit-transition: all 0.4s ease 0s;
-       -moz-transition: all 0.4s ease 0s;
-        -ms-transition: all 0.4s ease 0s;
-         -o-transition: all 0.4s ease 0s;
-            transition: all 0.4s ease 0s;
-}
-
-.portfolio-item:hover figcaption.mask {
-    bottom: 0;
-}
-
-figcaption.mask h3 {
-    margin: 0;
-    color: #fff;
-}
-
-ul.external {
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: -47px;
-
-    -webkit-transition: all 0.4s ease 0s;
-       -moz-transition: all 0.4s ease 0s;
-        -ms-transition: all 0.4s ease 0s;
-         -o-transition: all 0.4s ease 0s;
-            transition: all 0.4s ease 0s;
-}
-
-ul.external li {
-    display: inline-block;
-}
-
-ul.external li a {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #818181;
-    display: block;
-    padding: 10px 18px 13px;
-
-    -webkit-transition: all 0.5s ease 0s;
-       -moz-transition: all 0.5s ease 0s;
-        -ms-transition: all 0.5s ease 0s;
-         -o-transition: all 0.5s ease 0s;
-            transition: all 0.5s ease 0s;
-}
-
-ul.external li a:hover {
-    background-color: #009EE3;
-    color: #fff;
-}
-
-.portfolio-item:hover ul.external {
-    top: 0;
-}
-
-.fancybox-skin {
-    border-radius: 0;
-}
-
-.fancybox-title.fancybox-title-inside-wrap {
-    padding: 15px;
-}
-
-.fancybox-title h3 {
-    margin: 0 0 15px;
-}
-
-.fancybox-title p {
-    color: #818181;
-    font-size: 16px;
-    line-height: 22px;
-}
-
-.fancybox-title-inside-wrap {
-    padding-top: 0;
-}
-
-/*=================================================================
-	Testimonials
-==================================================================*/
-
-
-#testimonials {
-    background-image: url(../img/parallax/testimonial.jpg);
-    padding: 0;
-    color: #fff;
-}
-
-#testimonials .sec-title h2:after {
-    border-bottom: 1px solid #fff;
-}
-
-#testimonials .overlay {
-    background-color: rgba(15,155,224, 0.78);
-    padding: 70px 0 40px;
-}
-
-.testimonial-item {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    width: 64%;
-}
-
-.testimonial-item img {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    display: inline-block;
-    height: auto;
-    max-width: 100px;
-}
-
-.testimonial-item > div {
-    line-height: 30px;
-    position: relative;
-}
-
-.testimonial-item > div:before {
-    background-image: url("../img/icons/quotes.png");
-    background-repeat: no-repeat;
-    bottom: 127px;
-    height: 33px;
-    left: -35px;
-    position: absolute;
-    width: 45px;
-}
-
-.testimonial-item > div:after {
-    background-image: url("../img/icons/quotes.png");
-    background-position: -58px 0;
-    background-repeat: no-repeat;
-    bottom: -50px;
-    height: 33px;
-    position: absolute;
-    right: 0;
-    width: 45px;
-}
-
-.testimonial-item > div > span {
-    display: inline-block;
-    font-weight: 700;
-    margin: 40px 0 30px;
-    text-transform: uppercase;
-}
-
-#testimonials .owl-controls.clickable {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#testimonials .owl-buttons {
-    border: 2px solid #fff;
-    float: inherit;
-}
-
-#testimonials .owl-prev:hover,
-#testimonials .owl-next:hover {
-    color: #fff;
-}
-
-.price-table {
-    border: 1px solid #e3e3e3;
-}
-
-.price-table.featured {
-    -webkit-box-shadow: 0 4px 5px rgba(0,0,0,0.19);
-       -moz-box-shadow: 0 4px 5px rgba(0,0,0,0.19);
-            box-shadow: 0 4px 5px rgba(0,0,0,0.19);
-}
-
-.price-table > span {
-    color: #252525;
-    display: block;
-    font-size: 24px;
-    padding: 30px 0;
-    text-transform: uppercase;
-}
-
-.price-table .value {
-    background-color: #f8f8f8;
-    color: #727272;
-    padding: 20px 0;
-
-    -webkit-transition: all 0.7s ease 0s;
-       -moz-transition: all 0.7s ease 0s;
-        -ms-transition: all 0.7s ease 0s;
-         -o-transition: all 0.7s ease 0s;
-            transition: all 0.7s ease 0s;
-}
-
-.price-table.featured .value {
-    background-color: #009EE3;
-    color: #fff;
-}
-
-.price-table .value span {
-    display: inline-block;
-}
-
-.price-table .value span:first-child {
-    font-size: 32px;
-    line-height: 32px;
-}
-
-.price-table .value span:nth-child(2) {
-    font-size: 65px;
-    line-height: 65px;
-    margin-bottom: 25px;
-}
-
-.price-table .value span:last-child {
-    font-size: 16px;
-}
-
-.price-table ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.price-table ul li {
-    border-top: 1px solid #e3e3e3;
-    display: block;
-    padding: 25px 0;
-
-    -webkit-transition: all 0.7s ease 0s;
-       -moz-transition: all 0.7s ease 0s;
-        -ms-transition: all 0.7s ease 0s;
-         -o-transition: all 0.7s ease 0s;
-            transition: all 0.7s ease 0s;
-}
-
-.price-table ul li a {
-    display: block;
-    text-transform: uppercase;
-}
-
-.price-table.featured ul li:last-child,
-.price-table ul li:last-child:hover {
-    background-color: #009EE3;
-}
-
-.price-table.featured ul li:last-child a,
-.price-table ul li:last-child:hover a {
-    color: #fff;
-}
-
-
-/*=================================================================
-	Price
-==================================================================*/
-
-#social {
-    background-image: url(../img/slider/banner.jpg);
-    padding: 0;
-}
-
-#social .overlay {
-    background: url("../img/slide_bg.png") repeat scroll 0 0 transparent;
-    padding: 100px 0 120px;
-}
-
-.social-button {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.social-button li {
-    display: inline-block;
-}
-
-.social-button li:nth-child(2) {
-    margin: 0 75px;
-}
-
-.social-button li a {
-    border: 2px solid #fff;
-    border-radius: 50%;
-    color: #fff;
-    display: block;
-    height: 90px;
-    line-height: 96px;
-    width: 90px;
-
-    -webkit-transition: all 0.2s ease 0s;
-       -moz-transition: all 0.2s ease 0s;
-        -ms-transition: all 0.2s ease 0s;
-         -o-transition: all 0.2s ease 0s;
-            transition: all 0.2s ease 0s;
-}
-
-.social-button li a:hover {
-    color: #008ECC;
-    border: 2px solid #008ECC;
 }
 
 
@@ -1223,6 +890,7 @@ textarea.form-control {
     list-style: outside none none;
     margin: 20px 0;
     padding: 0;
+    text-align: center;
 }
 
 .footer-social ul li {
@@ -1258,8 +926,172 @@ textarea.form-control {
     font-size: 12px;
 }
 
+/*============================================================
+	Automate Legal Services Form Page
+==============================================================*/
+body.formPageBackground{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+	background: rgba(245,245,242,1);
+	background: -moz-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,245,242,1)), color-stop(100%, rgba(54,52,54,1)));
+	background: -webkit-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: -o-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: -ms-linear-gradient(top, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	background: linear-gradient(to bottom, rgba(245,245,242,1) 0%, rgba(54,52,54,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f2', endColorstr='#363436', GradientType=0 );
+}
+/*form styles*/
+#msform {
+	width: auto;
+	max-width:800px;
+	min-width:350px;
+	height: auto;
+	margin: 50px auto;
+	text-align: center;
+    margin-top: 200px;
+    position:relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 8px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	margin: 5% 10%;
+	box-sizing: border-box;
+	width: 80%;
+    /*stacking fieldsets above each other*/
+    position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
 
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 13px;
+}
 
+/*buttons*/
+.infringement_reason input {
+    visibility:hidden;
+}
+.infringement_reason label {
+    cursor: pointer;
+	background: #2C3E50;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.infringement_reason input:checked + label {
+    background: #0077BE;
+	border-width: 2px;
+	border-style:solid;
+	border-color: black;
+}
+
+#infringementOption-error{
+	color:red !important;
+	position: relative;
+	top:12px;
+}
+
+#msform .action-button {
+	width: auto;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 20px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 40px;
+	overflow: hidden;
+    margin: 0 auto;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size:11px;
+	/*width controls number of steps in the progressbar*/
+	width: 25%;
+	float: left;
+	position: relative;
+    left: -20px;
+}
+/*progressbar step counter*/
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	color: #333;
+	background: white;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+	font-size: 10px;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
 /*============================================================
 	Responsive Styles
  ============================================================*/
@@ -1296,28 +1128,6 @@ textarea.form-control {
 
     body {
         font-size: 14px;
-    }
-
-    .parallax {
-        background-position: centet tip !important;
-    }
-
-    .sec-title h2 {
-        font-size: 25px;
-    }
-
-    .sec-title h2:after {
-        left: 30%;
-    }
-
-/*navigation*/
-    .navbar-inverse .navbar-toggle {
-        border-color: #fff;
-    }
-
-    .navbar-inverse .navbar-toggle:hover,
-    .navbar-inverse .navbar-toggle:focus {
-        background-color: transparent;
     }
 
 

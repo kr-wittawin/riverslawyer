@@ -3,11 +3,11 @@
 
 /*basic reset*/
 * {margin: 0; padding: 0;}
-/*background*/
+/*form background*/
 html {
     height: 100%;
 }
-body {
+#formPageBackground {
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;

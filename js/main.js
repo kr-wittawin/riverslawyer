@@ -1,19 +1,4 @@
 
-/* ========================================================================= 
-*   nav-bar jquery
-* ========================================================================= */
-
-$('.nav a').click(function() {
-  $('.navbar-collapse').collapse('hide');
-});
-
-$(document).on("click touchstart",function (event) {
-    var clickover = $(event.target);
-    var _opened = $('.navbar-collapse').hasClass("in");
-    if (_opened === true && !clickover.hasClass("navbar-collapse")) {
-        $('.navbar-collapse').collapse('hide');
-    }
-});
 
 /* ========================================================================= 
 *   service menu jquery
@@ -163,6 +148,22 @@ $(function() {
 
 
 $(document).ready(function(){
+
+    /* ========================================================================= 
+    *   nav-bar jquery
+    * ========================================================================= */
+
+    $('.nav a').click(function() {
+    $('.navbar-collapse').collapse('hide');
+    });
+
+    $(document).on("click touchend",function (event) {
+        var clickover = $(event.target);
+        var _opened = $('.navbar-collapse').hasClass("in");
+        if (_opened === true && !clickover.hasClass("navbar-collapse")) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
 
 	/* ========================================================================= */
 	/*	Menu item highlighting

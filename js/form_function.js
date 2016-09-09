@@ -79,7 +79,9 @@ $(document).ready(function() {
 				//3. increase opacity of next_fs to 1 as it moves in
 				opacity = 1 - now;
 				//command to scale current_fs to 80%
-				current_fs.css({'transform': 'scale('+scale+')'});
+				current_fs.css({
+				'transform': 'scale('+scale+')',
+			});
 				//command to bring next_fs from the right
 				next_fs.css({'left': left, 'opacity': opacity});
 			},
