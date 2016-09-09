@@ -296,9 +296,9 @@ h1.navbar-brand {
 }
 .navbar-brand img {
     position:absolute;
-    top:18px;
-    width: 75px;
-    height:auto;
+    top: 20%;
+    width: auto;
+    height: 60%;
 }
 
 .navbar-fixed-top {
