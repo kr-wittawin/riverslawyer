@@ -32,12 +32,24 @@ $(document).ready(function() {
         },
 			rules: {
 				infringementOption: {required: true},
-				firstName: {required: true},
-				lastName: {required: true},
-				infringementNo:{required: true}
+				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				infringementNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/}
 			},
 			messages: {
-				infringementOption: {required:"Please Select an Infringement Reason"}
+				infringementOption: {required:"Please Select an Infringement Reason"},
+				firstName: {
+					required:"Please fill in your First Name",
+					pattern:"Please Enter a Valid First Name"
+				},
+				lastName: {
+					required:"Please fill in your Last Name",
+					pattern:"Please Enter a Valid Last Name"
+				},
+				infringementNo: {
+					required:"Please fill in your Infringement Number",
+					pattern:"Please Enter a Valid Infringement Number"
+				}
 			}
 			});
 
