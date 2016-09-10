@@ -1056,7 +1056,7 @@ textarea.form-control {
 	content: counter(step);
 	counter-increment: step;
 	color: #333;
-	background: #006994;
+	background: #0077BE;
     color:white;
 	width: 20px;
 	line-height: 20px;

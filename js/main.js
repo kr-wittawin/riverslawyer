@@ -1,83 +1,8 @@
 
-
-/* ========================================================================= 
-*   service menu jquery
-* ========================================================================= */
-
-$('.service-menu').on('click', function(e){
-    $('.current').removeClass('current');
-    $(this).addClass('current');
-});
-
-/* ========================================================================= */
-/*	page transition
-/* ========================================================================= */
-
-
-$("#business").on('click', function(e){
-    window.location.href = "expertise.html";
-    window.location = "expertise.html?tab=business";
-});
-$("#property").on('click', function(e){
-    window.location.href = "expertise.html";
-    window.location = "expertise.html?tab=property";
-});
-$("#immigration").on('click', function(e){
-    window.location.href = "expertise.html";
-    window.location = "expertise.html?tab=immigration";
-});
-$("#litigation").on('click', function(e){
-    window.location.href = "expertise.html";
-    window.location = "expertise.html?tab=litigation";
-});
-
-function getParameterByName(name) 
-{
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-/* when page load */
-jQuery(window).load(function(){
-    /* select menu after loads */
-    if(getParameterByName('tab') == 'aboutus')
-    {
-        $('.navbar-nav li a[href$="#aboutus"]').click()
-    } else if(getParameterByName('tab') == 'news') {
-        $('.navbar-nav li a[href$="#news"]').click()
-    } else if(getParameterByName('tab') == 'contactus'){
-        $('.navbar-nav li a[href$="#contactus"]').click()
-    } 
-
-    /* select service */
-	if(getParameterByName('tab') == 'property')
-    {
-        $("#property-menu").addClass("current");
-        $("#property-content").addClass("active");
-    } else if(getParameterByName('tab') == 'business')
-    {
-        $("#business-menu").addClass("current");
-        $("#business-content").addClass("active");
-    } else if(getParameterByName('tab') == 'immigration')
-    {
-        $("#immigration-menu").addClass("current");
-        $("#immigration-content").addClass("active");
-    } else if(getParameterByName('tab') == 'litigation')
-    {
-        $("#litigation-menu").addClass("current");
-        $("#litigation-content").addClass("active");
-    } else {
-        $("#business-menu").addClass("current");
-        $("#business-content").addClass("active");
-    }
-});
-
 /* ========================================================================= */
 /*  Welcome Section Slider
 /* ========================================================================= */
-
+/*
 $(function() {
 
     var Page = (function() {
@@ -144,13 +69,12 @@ $(function() {
     Page.init();
 
 });
-
-
+*/
 
 $(document).ready(function(){
 
-    /* ========================================================================= 
-    *   nav-bar jquery
+    /* =========================================================================
+    *   nav-bar collapse - closing on click jquery
     * ========================================================================= */
 
     $('.nav a').click(function() {
@@ -194,11 +118,117 @@ $(document).ready(function(){
     //    }
     //});
 
+    /* ========================================================================= */
+    /*	page transition
+    /* ========================================================================= */
+
+    $("#business").on('click', function(e){
+        window.location.href = "expertise.html";
+        window.location = "expertise.html?tab=business";
+    });
+    $("#property").on('click', function(e){
+        window.location.href = "expertise.html";
+        window.location = "expertise.html?tab=property";
+    });
+    $("#immigration").on('click', function(e){
+        window.location.href = "expertise.html";
+        window.location = "expertise.html?tab=immigration";
+    });
+    $("#litigation").on('click', function(e){
+        window.location.href = "expertise.html";
+        window.location = "expertise.html?tab=litigation";
+    });
+
+    function getParameterByName(name)
+    {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    /* when page load */
+    jQuery(window).load(function(){
+        /* select menu after loads */
+        if(getParameterByName('tab') == 'aboutus')
+        {
+            $('.navbar-nav li a[href$="#aboutus"]').click()
+        } else if(getParameterByName('tab') == 'news') {
+            $('.navbar-nav li a[href$="#news"]').click()
+        } else if(getParameterByName('tab') == 'contactus'){
+            $('.navbar-nav li a[href$="#contactus"]').click()
+        }
+
+        /* select service */
+    	if(getParameterByName('tab') == 'property')
+        {
+            $("#property-menu").addClass("current");
+            $("#property-content").addClass("active");
+        } else if(getParameterByName('tab') == 'business')
+        {
+            $("#business-menu").addClass("current");
+            $("#business-content").addClass("active");
+        } else if(getParameterByName('tab') == 'immigration')
+        {
+            $("#immigration-menu").addClass("current");
+            $("#immigration-content").addClass("active");
+        } else if(getParameterByName('tab') == 'litigation')
+        {
+            $("#litigation-menu").addClass("current");
+            $("#litigation-content").addClass("active");
+        } else {
+            $("#business-menu").addClass("current");
+            $("#business-content").addClass("active");
+        }
+    });
+
+    /* =========================================================================
+    *   expertise menu jquery
+    * ========================================================================= */
+
+    $('.service-menu').on('click', function(e){
+        $('.current').removeClass('current');
+        $(this).addClass('current');
+    });
+
+    /* =========================================================================
+    *   expertise menu jquery
+    * ========================================================================= */
+
+    $(".sendMail").click(function() {
+        $('#emailContactForm').validate({
+            rules: {
+                name: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+                email: {required: true, email: true},
+                subject: {required: true, pattern:/^[a-zA-z0-9$]+[a-zA-Z0-9$\+\- ]+$/},
+                message: {required: true, pattern:/^[a-zA-Z0-9$]+[a-zA-Z0-9$\+\- ]+$/, maxlength: 200}
+            },
+            messages: {
+                name: {
+					required:"Please Fill in your Name",
+					pattern:"Please Enter a Valid Name"
+				},
+                email: {
+					required:"Please Fill in Your Email",
+					email:"Please Enter a Valid Email"
+				},
+                subject: {
+					required:"Please Fill in a Subject Title",
+					pattern:"Please Remove Non Alphanumeric Characters"
+				},
+                message: {
+					required:"The Message is Empty",
+					pattern:"Please Remove Non Alphanumeric Characters"
+				},
+            }
+        });
+    });
+
 
 	/* ========================================================================= */
 	/*	Fix Slider Height
 	/* ========================================================================= */
-
+    /*
     // Slider Height
     var slideHeight = $(window).height();
 
@@ -218,12 +248,12 @@ $(document).ready(function(){
 		singleItem:true,
 		navigationText: ["<i class='fa fa-angle-left fa-lg'></i>","<i class='fa fa-angle-right fa-lg'></i>"]
 	});
-
+    */
 
 	/* ========================================================================= */
 	/*	Featured Project Lightbox
 	/* ========================================================================= */
-
+    /*
 	$(".fancybox").fancybox({
 		padding: 0,
 
@@ -251,12 +281,12 @@ $(document).ready(function(){
 			}
 		}
 	});
-
+    */
 });
 
 
 /* ==========  START GOOGLE MAP ========== */
-
+/*
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 
@@ -341,11 +371,12 @@ function init() {
 		icon: 'img/icons/map-marker.png',
     });
 }
-
+*/
 // ========== END GOOGLE MAP ========== //
-
+/*
 var wow = new WOW ({
 	offset:       75,          // distance to the element when triggering the animation (default is 0)
 	mobile:       false,       // trigger animations on mobile devices (default is true)
 });
 wow.init();
+*/

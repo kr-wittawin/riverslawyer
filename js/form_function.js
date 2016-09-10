@@ -39,15 +39,15 @@ $(document).ready(function() {
 			messages: {
 				infringementOption: {required:"Please Select an Infringement Reason"},
 				firstName: {
-					required:"Please fill in your First Name",
+					required:"Please Fill in Your First Name",
 					pattern:"Please Enter a Valid First Name"
 				},
 				lastName: {
-					required:"Please fill in your Last Name",
+					required:"Please Fill in Your First Name",
 					pattern:"Please Enter a Valid Last Name"
 				},
 				infringementNo: {
-					required:"Please fill in your Infringement Number",
+					required:"Please fill in Your Infringement Number",
 					pattern:"Please Enter a Valid Infringement Number"
 				}
 			}
