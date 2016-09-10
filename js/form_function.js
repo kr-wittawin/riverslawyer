@@ -65,7 +65,12 @@ $(document).ready(function() {
 
 		//activate next step on progressbar using the index of next_fs
 		$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
+/*
+		next_fs.fadeIn('slow');
+		current_fs.css({'display':'none'});
+		// Adding Class Active To Show Steps Forward;
+		next_fs.addClass('active');
+*/
 		//show the next fieldset
 		next_fs.show();
 		//hide the current fieldset with style
@@ -79,7 +84,10 @@ $(document).ready(function() {
 				//3. increase opacity of next_fs to 1 as it moves in
 				opacity = 1 - now;
 				//command to scale current_fs to 80%
-				current_fs.css({'transform': 'scale('+scale+')'});
+				current_fs.css({
+				'transform': 'scale('+scale+')',
+				'position': 'absolute'
+			});
 				//command to bring next_fs from the right
 				next_fs.css({'left': left, 'opacity': opacity});
 			},
@@ -93,6 +101,7 @@ $(document).ready(function() {
 		});
 	});
 
+
 	$(".previous").click(function(){
 		$('#msform input[type="text"]').tooltipster('hide');
 		$('#msform input[type="text"]').removeClass('error');
@@ -104,6 +113,13 @@ $(document).ready(function() {
 
 		//de-activate current step on progressbar
 		$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+/*
+		current_fs.removeClass('active');
+		current_fs.css({'display':'none'});
+		previous_fs.fadeIn('slow');
+		//Remove Class Active To Show Steps Backward;
+	*/
 
 		//show the previous fieldset
 		previous_fs.show();
@@ -123,12 +139,14 @@ $(document).ready(function() {
 			duration: 800,
 			complete: function(){
 				current_fs.hide();
+				previous_fs.css({'position':'inherit'});
 				animating = false;
 			},
 			//this comes from the custom easing plugin
 			easing: 'easeInOutBack'
 		});
 	});
+
 	$(".submit").click(function() {
 		var chosenInfOption = $('input[name="infringementOption"]:checked').val();
 		var infOptReason = $('input[name="infringementOption"]:checked').next('label:first').text();
@@ -151,9 +169,11 @@ $(document).ready(function() {
 				return "No. 3" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
 			});
 		}
-
 	});
 });
+
+
+
 
 /*
 $("#parkingReviewForm").validate({
