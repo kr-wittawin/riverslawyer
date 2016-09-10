@@ -149,6 +149,9 @@ $(document).ready(function(){
 
     /* when page load */
     jQuery(window).load(function(){
+        /* disabled class */
+        $('#submit').prop('disabled', false);
+
         /* select menu after loads */
         if(getParameterByName('tab') == 'aboutus')
         {
