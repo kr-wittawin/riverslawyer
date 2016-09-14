@@ -21,7 +21,7 @@ PHP script for email
                     $email = $_REQUEST['email'];
                     $name = $_REQUEST['name'];
                     $message = $_REQUEST['message'];
-                    $headers = "This email is sent by $name from riverslawyers website:";
+                    $headers = "This email is sent from $name riverslawyers website:";
                     $sent = mail($to,$subject,$message,$headers);
                     if($sent) {
                         print ('<div class="col-md-6 col-sm-6 col-xs-12 text-center" style="margin-top:100px;">
