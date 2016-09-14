@@ -346,6 +346,7 @@ h1.navbar-brand {
     width: 20px;
     text-align: center;
 }
+
 .footer-social i {
     height: 60px;
     width: 60px;
@@ -359,12 +360,6 @@ h1.navbar-brand {
     text-align: center;
 }
 
-@media (min-width: 375px){
-    .small-service {
-        display: none !important;
-    }
-}
-
 @media (min-width: 375px) and (max-width: 767px) {
     .footer-social img {
         margin-top: -20px;
@@ -375,9 +370,6 @@ h1.navbar-brand {
 }
 
 @media (max-width: 374px) {
-    .big-service {
-        display: none !important;
-    }
     .footer-social img {
         margin-top: -8px;
         height: 36px;
@@ -723,6 +715,19 @@ h1.navbar-brand {
 
 .contact-panel h2, .contact-panel p {
     color: white;
+}
+
+.contact-panel .footer-social i {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+}
+
+.contact-panel .footer-social img {
+    margin-top: -9px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
 }
 
 .service-panel {
