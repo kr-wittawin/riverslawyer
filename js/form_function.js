@@ -146,7 +146,7 @@ $(document).ready(function() {
 			easing: 'easeInOutBack'
 		});
 	});
-
+/*
 	$(".submit").click(function() {
 		var chosenInfOption = $('input[name="infringementOption"]:checked').val();
 		var infOptReason = $('input[name="infringementOption"]:checked').next('label:first').text();
@@ -170,6 +170,7 @@ $(document).ready(function() {
 			});
 		}
 	});
+	*/
 });
 
 
