@@ -1,3 +1,22 @@
+<?php
+require_once(__DIR__ . '/stripe_config.php');
+	$token  = $_POST['stripeToken'];
+	$email = $_POST['stripeEmail'];
+	$name = $_POST['firstName'] . " " . $_POST['lastName'];
+
+	$customer = \Stripe\Customer::create(array(
+	'email' => $email,
+	'source'  => $token,
+	'description' => "Customer Name is " . $name
+	));
+
+	$charge = \Stripe\Charge::create(array(
+		'customer' => $customer->id,
+		'amount'   => 100,
+		'currency' => 'aud',
+		'description' => 'Charge for Parking Infringement Appeal Form'
+	));
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->

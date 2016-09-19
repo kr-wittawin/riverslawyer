@@ -34,21 +34,26 @@ $(document).ready(function() {
 				infringementOption: {required: true},
 				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
 				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				infringementNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/}
+				email: {required: true, email:true},
+				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/}
 			},
 			messages: {
 				infringementOption: {required:"Please Select an Infringement Reason"},
 				firstName: {
-					required:"Please Fill in Your First Name",
+					required:"Please Fill in Your Name",
 					pattern:"Please Enter a Valid First Name"
 				},
 				lastName: {
-					required:"Please Fill in Your First Name",
+					required:"Please Fill in Your Last Name",
 					pattern:"Please Enter a Valid Last Name"
 				},
+				email: {
+					required:"Please fill in Your Email Address",
+					email:"Please Enter a Valid Email Address"
+				},
 				infringementNo: {
-					required:"Please fill in Your Infringement Number",
-					pattern:"Please Enter a Valid Infringement Number"
+					required:"Please fill in Your Parking Infringement Number",
+					pattern:"Please Enter a Valid Parking Infringement Number"
 				}
 			}
 			});

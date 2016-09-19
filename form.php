@@ -1,10 +1,11 @@
-
+<?php require_once(__DIR__ . '/stripe_config.php'); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <!--http://thecodeplayer.com/walkthrough/jquery-multi-step-form-with-progress-bar-->
+
 	<head>
 		<!-- meta character set -->
 		<meta charset="utf-8">
@@ -134,8 +135,9 @@
 							<div class = "personal_detail">
 							<input type="text" name="firstName" id= "firstName" placeholder="First Name" />
 							<input type="text" name="lastName" id = "lastName" placeholder="Last Name" />
+							<!--<input type="text" name="email" id = "email" placeholder="email" />-->
 							<input type="text" name="infringementNo" id = "infNo" placeholder="Infringement Notice Number" />
-							<textarea name="address" placeholder="Address"></textarea>
+							<textarea name="additionalComment" placeholder="Additional Comment"></textarea>
 							</div>
 							<div class="form-errors"></div></br>
 							<input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -143,9 +145,20 @@
 						</fieldset>
 						<fieldset>
 							<h2 class="fs-title">Donate</h2>
-							<h3 class="fs-subtitle">You can donate to us via Paypal</h3>
-							<input type="button" name="previous" class="previous action-button" value="Edit Details" />
-							<input type="submit" name="submit" class="submit next action-button" value="Donate and Receive Form" />
+							<h3 class="fs-subtitle">You can donate to us via Stripe</h3>
+							<input type="button" name="previous" class="previous action-button" value="Edit Details" /> </br>
+								  <script
+								    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+								    data-key= "<?php echo $stripe['publishable_key']; ?>"
+									data-panel-label="Donate"
+									data-label="Donate"
+								    data-amount="100"
+								    data-name="Rivers Lawyers"
+								    data-description="Parking Infringement Appeal Form"
+								    data-locale="auto"
+								    data-zip-code="false"
+								    data-currency="aud">
+								  </script>
 						</fieldset>
 					</div>
 				</form>
