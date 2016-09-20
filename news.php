@@ -78,7 +78,7 @@
                         <li><a class="externallink" href="index.html">Home</a></li>
 						<li><a class="externallink" href="expertise.html">Expertise</a></li>
                         <li><a class="externallink" href="index.html?tab=aboutus">About us</a></li>
-                        <li><a class="externallink" href="form.html">Automated Legal Services</a></li>
+                        <li><a class="externallink" href="form.php">Automated Legal Services</a></li>
 						<li><a href="#body">News</a></li>
                         <li><a class="externallink" href="index.html?tab=contactus">Contact us</a></li>
                     </ul>
