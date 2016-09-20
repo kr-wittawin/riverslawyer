@@ -98,50 +98,125 @@
 
         <!--banner end-->
 
-        <?php
-            print ('whatsup mysql');
-            print ($rows);
-            echo 'Name 
-            sdf
-            sadf
-            sadfsadf
-            sadfsadffsad
-            fclosesdaf
-            sdaf
-            sdf';
+        <!-- news header-->
 
+        <div class="container newsheader">
+            <ul>
+                <?php
+                    $dir = 'news/';
+                    $images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE); 
+                    $contents = glob($dir . '*.{txt}', GLOB_BRACE);
 
-            mysql_connect('localhost','river936_kr','rivers');
-            print ('whatsup mysql2');
-            mysql_select_db("river936_RL_Account");
-            print ('whatsup mysql3');
-            $sql = "SELECT * FROM Account";
-            print ('whatsup mysql4');
-            $records = mysql_query($sql);
-            print ('whatsup mysql5 test test');
+                    $num_of_files = 3; //number of images to display
 
-            while($row = mysql_fetch_assoc($records)){
-            
+                    foreach($contents as $content)
+                    {
+                        $index = 3 - $num_of_files; 
+
+                        $handle = fopen($content, "r");
+                        if ($handle) {
+                            if(($line = fgets($handle)) !== false) {
+                                $title = $line;
+                            }
+                            fclose($handle);
+                        } else {
+                            echo "File error";
+                        } 
+
+                        if($num_of_files > -1) 
+                        echo "<li class='bignews'>
+                                <br><img src=".$images[$index]."><br>
+                                <b>".$title."</b><br>
+                                Created on ".date('d M y', filemtime($content)) ."
+                            </li>"; //display images
+                        else
+                        break;
+
+                        $num_of_files--;
+                    }
+
+                ?>
+                <li class="smallnews">
+                    <b>Little News</b>
+                    <ul>
+                        <li style="display: block">Other News4</li>
+                        <li style="display: block">Other News5</li>
+                        <li style="display: block">Other News6</li>
+                        <li style="display: block">Other News7</li>    
+                        <li style="display: block">Other News8</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- news header end -->
+
+        <!--content start-->
+            <div class="container">
+                <div class = "row tab-content service-panel">
+                    <div class="col-md-8 col-sm-6 col-xs-12 service-content">
+                        <div class="content-title">
+                          <h1>News</h1>
+                        </div>
+                        <div>
+                          <h2>Headlines</h2>
+                          <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
+                          <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                          <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                          <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
+                        </div>
+                    </div>
+
+                    <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel">
+                        <div class="title">
+                          <h2>Contact Us</h2>
+                        </div>
+                        <div class="contact-panel-content">
+                          <P> Rivers Lawyers</P>
+                          <P> Suite 609, 530 Little Collins Street,</br> Melbourne VIC 3000</P>
+                          <P> Enquiry: +61 (0) 423 950 250</P>
+                          <P> Email: kevin.kang@riverslawyers.com.au<P>
+                        </div>
+                        <div class="footer-social">
+							<ul>
+								<li class="wow animated zoomIn"><a href="http://www.facebook.com" target="_blank">
+                                    <i class="fa fa-facebook fa-border2 fa-2x"></i>
+                                </a></li>
+								<li class="wow animated zoomIn"><a href="http://www.twitter.com" target="_blank">
+                                    <i class="fa fa-twitter fa-border2 fa-2x"></i>
+                                </a></li>
+								<li class="wow animated zoomIn"><a href="http://www.whatsapp.com" target="_blank">
+                                    <img src = "img/whatsapp.png" alt="whatsapp"><span></span>
+                                </a></li>
+								<li class="wow animated zoomIn"><a href="http://www.instagram.com" target="_blank">
+                                    <i class="fa fa-instagram fa-border2 fa-2x"></i>
+                                </a></li>
+                                <li class="wow animated zoomIn"><a href="http://www.kakaotalk.com" target="_blank">
+                                    <img src = "img/kakaotalk.png" alt="kakaotalk"><span></span>
+                                </a></li>
+							</ul>
+						</div>
+                    </aside>
+                </div>
+            </div>
+                <br><br>
+            <!--content end-->
+
+        <!-- <?php
+
+            $db = mysqli_connect('localhost','root','','test');
+            $sql = "SELECT * FROM test_table";
+            if($result = mysqli_query($db,$sql)){
+                if($result->num_rows) {
+                    $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
+                    
+                    foreach($rows as $row) {
+                        echo '/..........', $row['user'], ' ', $row['color'],  '<br>';
+                    }
+                }
             }
-            print ('whatsup mysql6');
-
-            echo $row["username"]; 
-
-            print ('whatsup mysql');
-            print ($rows);
-            echo 'Name 
-            sdf
-            sadf
-            sadfsadf
-            sadfsadffsad
-            fclosesdaf
-            sdaf
-            sdf';
            
-        ?>
-
-
-
+        ?>-->
 
         <footer id="footer">
 			<div class="container">

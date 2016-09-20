@@ -965,6 +965,33 @@ textarea.form-control {
 }
 
 /*============================================================
+	News Header
+==============================================================*/
+
+.newsheader {
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+}
+
+.newsheader li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.newsheader li img {
+    width: 80%;
+    height: auto;
+}
+
+.newsheader .bignews {
+    width: 20%;
+}
+
+.newsheader .smallnews {
+    width: 35%;
+}
+
+/*============================================================
 	Automate Legal Services Form Page
 ==============================================================*/
 /*form styles*/
