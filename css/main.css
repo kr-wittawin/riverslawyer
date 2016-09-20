@@ -197,6 +197,14 @@ main > section {
     position:relative;
     text-align:center;
 }
+.banner-s{
+    height:400px;
+    margin:0 auto;
+    margin-bottom:40px;
+    background-color: #393939;
+    position:relative;
+    text-align:center;
+}
 .banner h1{
     display:block;
     color:#fff;
@@ -211,6 +219,21 @@ main > section {
     font-size:32px;
     position:relative;
     top:280px;
+}
+.banner-s h1{
+    display:block;
+    color:#fff;
+    font-size:76px;
+    position:relative;
+    top:130px;
+}
+.banner-s h2{
+    display:block;
+    margin-top: 20px;
+    color:#fff;
+    font-size:32px;
+    position:relative;
+    top:130px;
 }
 /*-------------------------------------------------
 
@@ -360,6 +383,12 @@ h1.navbar-brand {
     text-align: center;
 }
 
+@media (min-width: 375px) {
+    .small-service {
+        display: none !important;
+    } 
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
     .footer-social img {
         margin-top: -20px;
@@ -370,6 +399,9 @@ h1.navbar-brand {
 }
 
 @media (max-width: 374px) {
+    .big-service {
+        display: none !important;
+    } 
     .footer-social img {
         margin-top: -8px;
         height: 36px;
