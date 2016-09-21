@@ -990,6 +990,7 @@ textarea.form-control {
 	border-radius: 1px;
 	cursor: pointer;
 	padding: 10px 20px;
+    width: 100%;
 }
 .infringement_reason input:checked + label {
     background: #0077BE;
@@ -1005,7 +1006,7 @@ textarea.form-control {
 }
 
 #msform .action-button {
-	width: auto;
+	width: 100%;
 	background: #27AE60;
 	font-weight: bold;
 	color: white;
@@ -1013,7 +1014,7 @@ textarea.form-control {
 	border-radius: 1px;
 	cursor: pointer;
 	padding: 10px 5px;
-	margin: 20px 5px;
+	margin: 5px 5px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
