@@ -149,7 +149,7 @@
 							<h3 class="fs-subtitle"> Please donate minimum $2 to obtain form. </h3>
 							<span style ="white-space:nowrap">
 								<label for= "chargeAmount">$</label>
-								 <input type="number" id="chargeAmount" name= "chargeAmount" placeholder= "Donation Amount" min="2.00" step="1.00" /></p></br>
+								 <input type="number" id="chargeAmount" name= "chargeAmount" placeholder= "Donation Amount" min="2.00" step="1.00" /></br>
 							</span>
 							<input type="hidden" id="stripeToken" name="stripeToken" />
 							<input type="hidden" id="stripeEmail" name="stripeEmail" />

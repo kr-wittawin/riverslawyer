@@ -165,7 +165,7 @@ $(document).ready(function() {
 	  token: function(token) {
 		  $("#stripeToken").val(token.id);
 		  $("#stripeEmail").val(token.email);
-		  $("#chargeAmount").val($("#chargeAmount").val() * 100);
+/*		  $("#chargeAmount").val($("#chargeAmount").val() * 100);*/
 		  $("#msform").submit();
 	  }
 	});
@@ -226,16 +226,14 @@ $(document).ready(function() {
 		}
 
 		//Stripe Checkout
-	    var chargeAmount = $("#chargeAmount").val();
-		var amount = chargeAmount*100;
 /*	    var displayAmount = parseFloat(Math.floor($("#chargeAmount").val() * 100) / 100).toFixed(2);*/
+		var displayAmount = $("#chargeAmount").val();
 	    // Open Checkout with further options
 	    handler.open({
 	        name: 'Rivers Lawyers',
 	        description: 'Parking Infringement Appeal Form',
 			currency: 'aud',
-	        amount: amount,
-			panelLabel: 'DONATE'
+			panelLabel: 'DONATE $' + displayAmount
 	    });
 	    e.preventDefault();
 	});

@@ -11,7 +11,8 @@ require_once(__DIR__ . '/stripe_config.php');
 			$token  = $_POST['stripeToken'];
 			$email = $_POST['stripeEmail'];
 			$name = $_POST['firstName'] . " " . $_POST['lastName'];
-			$amount = $_POST['chargeAmount'];
+			//converting charge amount into stripe  compatible value in cents
+			$amount = $_POST['chargeAmount']*100;
 			// collect customer information from form
 			$customer = \Stripe\Customer::create(array(
 			'email' => $email,
