@@ -1,16 +1,18 @@
 $(document).ready(function() {
 
+	//multi-step form
 	var current_fs, next_fs, previous_fs; //fieldsets
 	var left, opacity, scale; //fieldset properties which we will animate
-	var animating; //flag to prevent quick multi-click glitches
- 	// initialize tooltipster on text input elements
+	var animating; //flag to prevent quick multi-click glitche
 
-	$('#msform input[type="text"], #msform input[type="radio"]').tooltipster({
+ 	// initialize tooltipster on text input elements
+	$('#msform input[type="text"], #msform input[type="radio"], #msform input[type="number"]').tooltipster({
         trigger: 'custom',
         onlyOne: false,
         position: 'right'
     });
 
+	//next button functionality
 	$(".next").click(function(){
 		// initialize validate plugin on the form
 		$('#msform').validate({
@@ -35,7 +37,8 @@ $(document).ready(function() {
 				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
 				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
 				email: {required: true, email:true},
-				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/}
+				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
+				chargeAmount: {required: true,min: 2}
 			},
 			messages: {
 				infringementOption: {required:"Please Select an Infringement Reason"},
@@ -54,9 +57,12 @@ $(document).ready(function() {
 				infringementNo: {
 					required:"Please fill in Your Parking Infringement Number",
 					pattern:"Please Enter a Valid Parking Infringement Number"
-				}
+				},
+				chargeAmount: {
+					required:"Please Enter an Amount to Donate",
+					min: "Please donate minimum $2"}
 			}
-			});
+		});
 
 		if ((!$('#msform').valid())) {
 			return false;
@@ -106,7 +112,7 @@ $(document).ready(function() {
 		});
 	});
 
-
+	//previous button functionality
 	$(".previous").click(function(){
 		$('#msform input[type="text"]').tooltipster('hide');
 		$('#msform input[type="text"]').removeClass('error');
@@ -151,7 +157,94 @@ $(document).ready(function() {
 			easing: 'easeInOutBack'
 		});
 	});
-/*
+
+	//Stripe Configuration
+	var handler = StripeCheckout.configure({
+	  key: 'pk_test_4DdKTYdDCQZKocZKjVWQjsLL',
+	  locale: 'auto',
+	  token: function(token) {
+		  $("#stripeToken").val(token.id);
+		  $("#stripeEmail").val(token.email);
+/*		  $("#chargeAmount").val($("#chargeAmount").val() * 100);*/
+		  $("#msform").submit();
+	  }
+	});
+	//Stripe Custom Charge Button
+	$('#customCharge').on('click', function (e) {
+		//validation
+		$('#msform').validate({
+			errorPlacement: function (error, element) {
+
+            var lastError = $(element).data('lastError'),
+                newError = $(error).text();
+
+            $(element).data('lastError', newError);
+			// check if newError is equal to lastError
+            if (newError !== '' && newError !== lastError) {
+                $(element).tooltipster('content', newError);
+                $(element).tooltipster('show');
+            }
+
+        },
+        success: function (label, element) {
+            $(element).tooltipster('hide');
+        },
+			rules: {
+				infringementOption: {required: true},
+				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				email: {required: true, email:true},
+				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
+				chargeAmount: {required: true,min: 2}
+			},
+			messages: {
+				infringementOption: {required:"Please Select an Infringement Reason"},
+				firstName: {
+					required:"Please Fill in Your Name",
+					pattern:"Please Enter a Valid First Name"
+				},
+				lastName: {
+					required:"Please Fill in Your Last Name",
+					pattern:"Please Enter a Valid Last Name"
+				},
+				email: {
+					required:"Please fill in Your Email Address",
+					email:"Please Enter a Valid Email Address"
+				},
+				infringementNo: {
+					required:"Please fill in Your Parking Infringement Number",
+					pattern:"Please Enter a Valid Parking Infringement Number"
+				},
+				chargeAmount: {
+					required:"Please Enter an Amount to Donate",
+					min: "Please donate minimum $2"}
+			}
+		});
+
+		if ((!$('#msform').valid())) {
+			return false;
+		}
+
+		//Stripe Checkout
+/*	    var displayAmount = parseFloat(Math.floor($("#chargeAmount").val() * 100) / 100).toFixed(2);*/
+		var displayAmount = $("#chargeAmount").val();
+	    // Open Checkout with further options
+	    handler.open({
+	        name: 'Rivers Lawyers',
+	        description: 'Parking Infringement Appeal Form',
+			currency: 'aud',
+			panelLabel: 'DONATE $' + displayAmount
+	    });
+	    e.preventDefault();
+	});
+
+	// Close Checkout on page navigation
+	$(window).on('popstate', function () {
+	    handler.close();
+	});
+
+
+/*	//submit button functionality
 	$(".submit").click(function() {
 		var chosenInfOption = $('input[name="infringementOption"]:checked').val();
 		var infOptReason = $('input[name="infringementOption"]:checked').next('label:first').text();
@@ -178,10 +271,7 @@ $(document).ready(function() {
 	*/
 });
 
-
-
-
-/*
+/*	//superseded form validation method
 $("#parkingReviewForm").validate({
 	rules: {
 		firstname: "required",

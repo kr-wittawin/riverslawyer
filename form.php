@@ -127,32 +127,28 @@
 							<h2 class="fs-title">Personal Details</h2>
 							<h3 class="fs-subtitle">Please fill in your details</h3>
 							<div class = "personal_detail">
-							<input type="text" name="firstName" id= "firstName" placeholder="First Name" />
-							<input type="text" name="lastName" id = "lastName" placeholder="Last Name" />
+							<input type="text" name="firstName" id= "firstName" placeholder="First Name" size="30" maxlength = "30" />
+							<input type="text" name="lastName" id = "lastName" placeholder="Last Name" size="30" maxlength = "30" />
 							<!--<input type="text" name="email" id = "email" placeholder="email" />-->
-							<input type="text" name="infringementNo" id = "infNo" placeholder="Infringement Notice Number" />
+							<input type="text" name="infringementNo" id = "infNo" placeholder="Infringement Notice Number" size="30" maxlength = "30" />
 							<textarea name="additionalComment" placeholder="Additional Comment"></textarea>
 							</div>
 							<div class="form-errors"></div></br>
-							<input type="button" name="previous" class="previous action-button" value="Previous" />
 							<input type="button" name="next" class="next action-button" value="Submit Detail" />
+							<input type="button" name="previous" class="previous action-button" value="Previous" />
 						</fieldset>
 						<fieldset>
-							<h2 class="fs-title">Donate</h2>
-							<h3 class="fs-subtitle">You can donate to us via Stripe</h3>
-							<input type="button" name="previous" class="previous action-button" value="Edit Details" /> </br>
-								  <script
-								    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-								    data-key= "<?php echo $stripe['publishable_key']; ?>"
-									data-panel-label="Donate"
-									data-label="Donate"
-								    data-amount="100"
-								    data-name="Rivers Lawyers"
-								    data-description="Parking Infringement Appeal Form"
-								    data-locale="auto"
-								    data-zip-code="false"
-								    data-currency="aud">
-								  </script>
+							<h2 class="fs-title">Donate to Charity</h2>
+							<h3 class="fs-subtitle">Donate to Charity via Stripe payment service</h3>
+							<h3 class="fs-subtitle"> Please donate minimum $2 to obtain form. </h3>
+							<span style ="white-space:nowrap">
+								<label for= "chargeAmount">$</label>
+								 <input type="number" id="chargeAmount" name= "chargeAmount" placeholder= "Donation Amount" min="2.00" step="1.00" /></br>
+							</span>
+							<input type="hidden" id="stripeToken" name="stripeToken" />
+							<input type="hidden" id="stripeEmail" name="stripeEmail" />
+							<input type="button" id="customCharge" class = "action-button" value = "Donate" /> </br>
+							<input type="button" name="previous" class="previous action-button" value="Edit Details" />
 						</fieldset>
 					</div>
 				</form>
@@ -194,6 +190,8 @@
 		<script src="js/form_function.js" type="text/javascript" type="text/javascript"></script>
 		<!-- Custom Functions -->
 		<script src="js/main.js" type="text/javascript"></script>
+		<!-- Stripe Custom Checkout -->
+		<script src="https://checkout.stripe.com/checkout.js"></script>
 
 	</body>
 </html>
