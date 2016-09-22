@@ -70,14 +70,8 @@
 							<li class="icon"><a href="http://www.twitter.com" role="button" target="_blank">
 								<i class="fa fa-twitter fa-border"></i><span></span>
 							</a></li>
-							<li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank">
-								<img src = "img/whatsapp.png" alt="whatsapp"><span></span>
-							</a></li>
 							<li class="icon"><a href="http://www.instagram.com" role="button" target="_blank">
 								<i class="fa fa-instagram fa-border"></i><span></span>
-							</a></li>
-							<li class="icon"><a href="#" role="button" target="_blank">
-								<img src = "img/kakaotalk.png" alt="kakaotalk"><span></span>
 							</a></li>
 	                    </ul>
 	                </nav>
@@ -87,8 +81,8 @@
                 <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation">
                     <ul id="nav" class="nav navbar-nav" >
                         <li><a class="externallink" href="index.html">Home</a></li>
+						<li><a class="externallink" href="aboutus.html">About us</a></li>
 						<li><a class="externallink" href="expertise.html">Expertise</a></li>
-                        <li><a class="externallink" href="index.html?tab=aboutus">About us</a></li>
                         <li><a class="externallink" href="#body">Automated Legal Services</a></li>
 						<li><a class="externallink" href="news.php">News</a></li>
                         <li><a class="externallink" href="index.html?tab=contactus">Contact us</a></li>

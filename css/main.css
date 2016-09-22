@@ -169,7 +169,6 @@ main > section {
     font-size: 36px;
     margin: 0 0 30px;
     position: relative;
-    font-style: italic;
 }
 
 .sec-title.white h2 {
@@ -321,12 +320,12 @@ h1.navbar-brand {
 .navbar-brand img {
     position:absolute;
     top: 15px;
-    width: 80px;
+    width: 100px;
     height: auto;
 }
 
 .navbar-fixed-top {
-    min-height: 110px;
+    min-height: 140px;
 }
 
 .navbar-fixed-top .navbar-collapse {
@@ -371,16 +370,9 @@ h1.navbar-brand {
 }
 
 .footer-social i {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     padding: 5px;
-}
-
-.footer-social img {
-    margin-top: -22px;
-    height: 60px;
-    width: 60px;
-    text-align: center;
 }
 
 @media (min-width: 375px) {
@@ -389,25 +381,10 @@ h1.navbar-brand {
     } 
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
-    .footer-social img {
-        margin-top: -20px;
-        height: 56px;
-        width: 56px;
-        text-align: center;
-    }
-}
-
 @media (max-width: 374px) {
     .big-service {
         display: none !important;
     } 
-    .footer-social img {
-        margin-top: -8px;
-        height: 36px;
-        width: 36px;
-        text-align: center;
-    }
     .footer-social i {
         height: 40px;
         width: 40px;
@@ -770,6 +747,30 @@ h1.navbar-brand {
     background-color:white;
 }
 
+/*=================================================================
+	About Us Page
+==================================================================*/
+
+.about-navigation {
+    margin-bottom: 20px;
+}
+
+.about-menu:hover{
+    border-bottom: 2px solid black;
+}
+
+.about-menu.current{
+    border-bottom: 2px solid black;
+}
+
+.about-panel {
+    background-color: #393939;
+}
+
+.about-content {
+    background-color:white;
+}
+
 
 /*=================================================================
 	Contact
@@ -815,6 +816,13 @@ textarea.form-control {
 
 .contact-details p {
     line-height: 30px;
+}
+
+.contact-details p img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .contact-details p i {
