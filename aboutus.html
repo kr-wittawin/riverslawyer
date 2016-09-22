@@ -76,10 +76,10 @@
                 <nav class="collapse navbar-collapse navbar-right" id="nav-collapse" role="navigation">
                     <ul id="nav" class="nav navbar-nav" >
                         <li><a class="externallink" href="index.html">Home</a></li>
-                        <li><a class="externallink" href="aboutus.html">About us</a></li>
+                        <li><a href="#">About us</a></li>
 						<li><a class="externallink" href="expertise.html">Expertise</a></li>
                         <li><a class="externallink" href="form.php">Automated Legal Services</a></li>
-						<li><a href="#">News</a></li>
+						<li><a class="externallink" href="news.php">News</a></li>
                         <li><a class="externallink" href="index.html?tab=contactus">Contact us</a></li>
                     </ul>
                 </nav>
@@ -98,75 +98,28 @@
 
         <!--banner end-->
 
-        <!-- news header-->
+            <!--Collapsable Content Button--->
+            <div class="container" id = "about-navigation">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center wow animated fadeIn">
+                    <div class="about-menu" data-toggle="tab" data-target="#aboutus-content" id="about-menu">
+                        <a href =#><h3>About Us</h3></a>
+                    </div>
+                </div>
+            </div><br><br>
 
-        <div class="container newsheader">
-            <ul>
-                <?php
-                    $dir = 'news/';
-                    $images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE); 
-                    $contents = glob($dir . '*.{txt}', GLOB_BRACE);
-
-                    $num_of_files = 3; //number of images to display
-
-                    foreach($contents as $content)
-                    {
-                        $index = 3 - $num_of_files; 
-
-                        $handle = fopen($content, "r");
-                        if ($handle) {
-                            if(($line = fgets($handle)) !== false) {
-                                $title = $line;
-                            }
-                            fclose($handle);
-                        } else {
-                            echo "File error";
-                        } 
-
-                        if($num_of_files > -1) 
-                        echo "<li class='bignews'>
-                                <br><img src=".$images[$index]."><br>
-                                <b>".$title."</b><br>
-                                Created on ".date('d M y', filemtime($content)) ."
-                            </li>"; //display images
-                        else
-                        break;
-
-                        $num_of_files--;
-                    }
-
-                ?>
-                <li class="smallnews">
-                    <b>Little News</b>
-                    <ul>
-                        <li style="display: block">Other News4</li>
-                        <li style="display: block">Other News5</li>
-                        <li style="display: block">Other News6</li>
-                        <li style="display: block">Other News7</li>    
-                        <li style="display: block">Other News8</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <!-- news header end -->
-
-        <!--content start-->
+            <!--content start-->
             <div class="container">
-                <div class = "row tab-content service-panel">
-                    <div class="col-md-8 col-sm-6 col-xs-12 service-content">
+                <div class = "row tab-content about-panel">
+                    <div class="col-md-8 col-sm-6 col-xs-12 tab-pane about-content" id ="aboutus-content">
                         <div class="content-title">
-                            <h1>News</h1>
+                          <h1>About Us</h1>
                         </div>
-                        
                         <div>
-                            <img scr="news/img3.jpeg" alt="Picture">
-
-                            <h2>Title 1</h2>
-                            <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
-                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-                            <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
+                          <h2>We can help with your legal services queries </h2>
+                          <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
+                          <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                          <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                          <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
                         </div>
                     </div>
 
@@ -203,23 +156,8 @@
                 </div>
             </div>
                 <br><br>
-            <!--content end-->
-
-        <!-- <?php
-
-            $db = mysqli_connect('localhost','root','','test');
-            $sql = "SELECT * FROM test_table";
-            if($result = mysqli_query($db,$sql)){
-                if($result->num_rows) {
-                    $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
-                    
-                    foreach($rows as $row) {
-                        echo '/..........', $row['user'], ' ', $row['color'],  '<br>';
-                    }
-                }
-            }
-           
-        ?>-->
+            <!--content end--->
+        <!-- end Service section -->
 
         <footer id="footer">
 			<div class="container">
