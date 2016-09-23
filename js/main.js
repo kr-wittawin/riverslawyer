@@ -204,7 +204,7 @@ $(document).ready(function(){
                 name: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
                 email: {required: true, email: true},
                 subject: {required: true, pattern:/^[a-zA-z0-9$]+[a-zA-Z0-9$\+\- ]+$/},
-                message: {required: true, pattern:/^[a-zA-Z0-9$]+[a-zA-Z0-9$\+\- ]+$/, maxlength: 200}
+                message: {required: true, maxlength: 200}
             },
             messages: {
                 name: {
@@ -220,8 +220,7 @@ $(document).ready(function(){
 					pattern:"Please Remove Non Alphanumeric Characters"
 				},
                 message: {
-					required:"The Message is Empty",
-					pattern:"Please Remove Non Alphanumeric Characters"
+					required:"Message is Empty"
 				},
             }
         });

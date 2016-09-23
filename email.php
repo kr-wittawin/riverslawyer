@@ -21,14 +21,19 @@ PHP script for email
                     $email = $_REQUEST['email'];
                     $name = $_REQUEST['name'];
                     $message = $_REQUEST['message'];
-                    $headers = "This email is sent from $name riverslawyers website:";
+
+                    $headers = "From: $name \r\n";
+                    $headers .= "From: $name \r\n";
+                    $headers .= "Reply to: $email \r\n";
+                    $headers .= "Topic: $subject \r\n";
+
                     $sent = mail($to,$subject,$message,$headers);
                     if($sent) {
                         print ('<div class="col-md-6 col-sm-6 col-xs-12 text-center" style="margin-top:100px;">
                         <h2>Your mail was sent</h2> <br>
                         <div class="service-item">
                             <i class="fa fa-envelope-o fa-5x"></i> <br><br>
-                            <p>Rivers Lawyers will reply promptly within 5 business days.</p> 
+                            <p>Rivers Lawyers will reply promptly within one business days.</p> 
                             <a class="btn btn-success btn-large" href="index.html"> Home</a>
                         </div>
                     </div>');
@@ -37,7 +42,7 @@ PHP script for email
                         <h2>Error</h2><br>
                         <div class="service-item">
                             <i class="fa fa-ban fa-5x"></i> <br><br>
-                            <p>Please try again.</p><br>
+                            <p>An error has occured. Please try again later.</p><br>
                             <a class="btn btn-danger btn-large" href="index.html"> Home</a>
                         </div>
                     </div>');
