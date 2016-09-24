@@ -128,21 +128,15 @@ require_once(__DIR__ . '/stripe_config.php');
                 <!-- social media nav -->
                 <div class = "hidden-sm hidden-xs hidden-md visible-lg">
 	                <nav class="collapse navbar-collapse navbar-right" role="navigation" >
-	                    <ul id ="social-media" class="nav navbar-nav">
+						<ul id ="social-media" class="nav navbar-nav">
 							<li class="icon"><a href="http://www.facebook.com" role="button" target="_blank">
 								<i class="fa fa-facebook fa-border"></i><span></span>
 							</a></li>
 							<li class="icon"><a href="http://www.twitter.com" role="button" target="_blank">
 								<i class="fa fa-twitter fa-border"></i><span></span>
 							</a></li>
-							<li class="icon"><a href="http://www.whatsapp.com" role="button" target="_blank">
-								<img src = "img/whatsapp.png" alt="whatsapp"><span></span>
-							</a></li>
 							<li class="icon"><a href="http://www.instagram.com" role="button" target="_blank">
 								<i class="fa fa-instagram fa-border"></i><span></span>
-							</a></li>
-							<li class="icon"><a href="#" role="button" target="_blank">
-								<img src = "img/kakaotalk.png" alt="kakaotalk"><span></span>
 							</a></li>
 	                    </ul>
 	                </nav>
