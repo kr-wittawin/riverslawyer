@@ -41,7 +41,7 @@
         Fixed Navigation
         ==================================== -->
         <header id="navigation" class="navbar-default navbar-fixed-top animated-header">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
@@ -102,14 +102,14 @@
             <ul>
                 <?php
                     $dir = 'news/';
-                    $images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE); 
+                    $images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE);
                     $contents = glob($dir . '*.{txt}', GLOB_BRACE);
 
                     $num_of_files = 3; //number of images to display
 
                     foreach($contents as $content)
                     {
-                        $index = 3 - $num_of_files; 
+                        $index = 3 - $num_of_files;
 
                         $handle = fopen($content, "r");
                         if ($handle) {
@@ -119,9 +119,9 @@
                             fclose($handle);
                         } else {
                             echo "File error";
-                        } 
+                        }
 
-                        if($num_of_files > -1) 
+                        if($num_of_files > -1)
                         echo "<li class='bignews'>
                                 <br><img src=".$images[$index]."><br>
                                 <b>".$title."</b><br>
@@ -140,7 +140,7 @@
                         <li style="display: block">Other News4</li>
                         <li style="display: block">Other News5</li>
                         <li style="display: block">Other News6</li>
-                        <li style="display: block">Other News7</li>    
+                        <li style="display: block">Other News7</li>
                         <li style="display: block">Other News8</li>
                     </ul>
                 </li>
@@ -156,7 +156,7 @@
                         <div class="content-title">
                             <h1>News</h1>
                         </div>
-                        
+
                         <div>
                             <img scr="news/img3.jpeg" alt="Picture">
 
@@ -210,13 +210,13 @@
             if($result = mysqli_query($db,$sql)){
                 if($result->num_rows) {
                     $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
-                    
+
                     foreach($rows as $row) {
                         echo '/..........', $row['user'], ' ', $row['color'],  '<br>';
                     }
                 }
             }
-           
+
         ?>-->
 
         <footer id="footer">

@@ -42,7 +42,7 @@
 		<!--Fixed Navigation
 	    ==================================== -->
         <header id="navigation" class="navbar-default navbar-fixed-top jumbotron">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
