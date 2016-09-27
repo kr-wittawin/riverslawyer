@@ -293,7 +293,7 @@ main > section {
 
     background-color: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    padding: 20px 0;
+    padding: 5px 20%;
 }
 
 #navigation.animated-header {
@@ -318,8 +318,7 @@ h1.navbar-brand {
     border-bottom: 2px solid black;
 }
 .navbar-brand img {
-    position:absolute;
-    top: 19px;
+    float:left;
     width: 100px;
     height: auto;
 }
@@ -334,7 +333,7 @@ h1.navbar-brand {
 }
 
 .navbar-toggle {
-margin-top: 33px;
+margin-top: 45px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -1017,7 +1016,7 @@ textarea.form-control {
 #msform {
 	width: auto;
 	max-width:800px;
-	min-width:320px;
+	min-width:300px;
 	height: auto;
 	margin: 200px auto 0;
 	text-align: center;
@@ -1179,29 +1178,40 @@ textarea.form-control {
 ==============================================================*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1350px) {
-    .navbar-default .navbar-nav > li {
-        position:relative;
-        right:200px;
+@media only screen and (min-width : 2101px) {
+    #navigation {
+    padding: 5px 25%;
     }
-    .navbar-brand img {
-        left:150px;
+}
+@media (min-width: 1755px) and (max-width: 2100px) {
+    #navigation {
+    padding: 5px 20%;
+    }
+}
+@media (min-width: 1510px) and (max-width: 1754px) {
+    #navigation {
+    padding: 5px 15%;
     }
 }
 /*============================================================
 	For Small Desktop
 ==============================================================*/
 
-@media (min-width: 1151px) and (max-width: 1350px) {
-    .navbar-default .navbar-nav > li {
-        position:relative;
-        right:80px;
-    }
-    .navbar-brand img {
-        left:120px;
+@media (min-width: 1350px) and (max-width: 1509px) {
+    #navigation {
+    padding: 5px 10%;
     }
 }
-
+@media (min-width: 1240px) and (max-width: 1349px) {
+    #navigation {
+    padding: 5px 7%;
+    }
+}
+@media (min-width: 1101px) and (max-width: 1239px) {
+    #navigation {
+    padding: 5px 6%;
+    }
+}
 
 /*============================================================
 	Tablet (Portrait) Design for a width of 768px
@@ -1211,7 +1221,10 @@ textarea.form-control {
 
 }
 /*Make navbar collapse at MD screen size*/
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
+    #navigation {
+    padding: 5px 5%;
+    }
     .navbar-header {
         float: none;
     }
@@ -1257,7 +1270,6 @@ textarea.form-control {
         font-size: 14px;
     }
 
-
 /* follow us */
     .social-button li:nth-child(2) {
         margin: 0 25px;
@@ -1283,8 +1295,21 @@ textarea.form-control {
         margin: 0 7px;
     }
 }
-
-
+/* mobile phone size nav bar */
+@media only screen and (max-width: 767px) {
+    .navbar-brand img {
+        width: 60px;
+    }
+    .navbar-fixed-top {
+        min-height:95px;
+    }
+    .navbar-toggle {
+        margin-top:28px;
+    }
+    .navbar-fixed-top .navbar-collapse {
+        margin-top: 20px;
+    }
+}
 /*============================================================
 	Mobile (Landscape) Design for a width of 480px
 ==============================================================*/
