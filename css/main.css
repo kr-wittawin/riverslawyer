@@ -301,7 +301,7 @@ main > section {
 }
 
 h1.navbar-brand {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     margin: 0;
     text-transform: uppercase;
@@ -319,7 +319,7 @@ h1.navbar-brand {
 }
 .navbar-brand img {
     position:absolute;
-    top: 15px;
+    top: 19px;
     width: 100px;
     height: auto;
 }
@@ -329,8 +329,16 @@ h1.navbar-brand {
 }
 
 .navbar-fixed-top .navbar-collapse {
-    max-height: 260px;
-    margin-top: 40px;
+    max-height: 270px;
+    margin-top: 50px;
+}
+
+.navbar-toggle {
+margin-top: 33px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color:black;
 }
 
 /*	Social Network
@@ -378,13 +386,13 @@ h1.navbar-brand {
 @media (min-width: 375px) {
     .small-service {
         display: none !important;
-    } 
+    }
 }
 
 @media (max-width: 374px) {
     .big-service {
         display: none !important;
-    } 
+    }
     .footer-social i {
         height: 40px;
         width: 40px;
@@ -1166,13 +1174,32 @@ textarea.form-control {
         margin-left: 4%;
     }
 }
+/*============================================================
+	For large Desktop
+==============================================================*/
 
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1350px) {
+    .navbar-default .navbar-nav > li {
+        position:relative;
+        right:200px;
+    }
+    .navbar-brand img {
+        left:150px;
+    }
+}
 /*============================================================
 	For Small Desktop
 ==============================================================*/
 
-@media (min-width: 980px) and (max-width: 1150px) {
-
+@media (min-width: 1151px) and (max-width: 1350px) {
+    .navbar-default .navbar-nav > li {
+        position:relative;
+        right:80px;
+    }
+    .navbar-brand img {
+        left:120px;
+    }
 }
 
 
@@ -1183,8 +1210,43 @@ textarea.form-control {
 @media (min-width: 768px) and (max-width: 979px) {
 
 }
-
-
+/*Make navbar collapse at MD screen size*/
+@media (max-width: 1150px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
 /*============================================================
 	Mobile (Portrait) Design for a width of 320px
 ==============================================================*/
