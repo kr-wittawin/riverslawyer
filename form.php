@@ -103,51 +103,85 @@
 					<!-- progressbar -->
 					<ul id="progressbar">
 						<li class="active">Parking Infringement Reason</li>
-						<li>Personal Details</li>
+						<li>Details</li>
 						<li>Donate</li>
-						<li>Form</li>
+						<li>Parking Infringement Review Letter</li>
 					</ul>
 					<!-- fieldsets -->
 					<div id = "msformFieldset">
 						<fieldset>
-							<h2 class="fs-title">Choose the Infringement Review Reason</h2>
-							<h3 class="fs-subtitle">Tell us the reason</h3>
+							<h2 class="fs-title">Parking Fine Infringement Review (Victoria Only)</h2>
+							<h3 class="fs-subtitle">Please select the most appropriate scenario below.</h3>
 							<div class="infringement_reason">
 					        <input type='radio' name='infringementOption' id='infringement1' value='Option 1'/>
-					        <label for='infringement1'>Option 1</label></br>
-					        <input type='radio' name='infringementOption'  id='infringement2'/ value='Option 2' />
-					        <label for='infringement2'>Option 2</label></br>
+					        <label for='infringement1'>My vehicle broke down.</label></br>
+					        <input type='radio' name='infringementOption'  id='infringement2' value='Option 2' />
+					        <label for='infringement2'>I was dealing with a medical emergency.</label><br/>
 					        <input type='radio'  name='infringementOption'  id='infringement3' value='Option 3' />
-					        <label for='infringement3'>Option 3</label></br>
+					        <label for='infringement3'>The offence was before I bought the vehicle.</label><br/>
+							<input type='radio'  name='infringementOption'  id='infringement4' value='Option 4' />
+							<label for='infringement4'>The offence was after I sold the vehicle.</label><br/>
+							<input type='radio'  name='infringementOption'  id='infringement5' value='Option 5' />
+							<label for='infringement5'>The offence was after the vehicle was stolen.</label><br/>
+							<input type='radio'  name='infringementOption'  id='infringement6' value='Option 6' />
+							<label for='infringement6'>The parking sign was not visible.</label><br/>
 							</div></br>
-							<div class="form-errors"></div></br>
+							<div class="form-errors"></div><br/>
 							<input type="button" name="next" class="next action-button" value="Next" />
 						</fieldset>
 						<fieldset>
-							<h2 class="fs-title">Personal Details</h2>
-							<h3 class="fs-subtitle">Please fill in your details</h3>
-							<div class = "personal_detail">
-							<input type="text" name="firstName" id= "firstName" placeholder="First Name" size="30" maxlength = "30" />
-							<input type="text" name="lastName" id = "lastName" placeholder="Last Name" size="30" maxlength = "30" />
-							<!--<input type="text" name="email" id = "email" placeholder="email" />-->
-							<input type="text" name="infringementNo" id = "infNo" placeholder="Infringement Notice Number" size="30" maxlength = "30" />
-							<textarea name="additionalComment" placeholder="Additional Comment"></textarea>
+							<h2 class="fs-title">Please Fill in Your Personal Details</h2>
+							<h3 class="fs-subtitle"></h3>
+							<div class = "personalDetail">
+							<select name = "title">
+								<option value="" disabled selected hidden>*Title</option>
+								<option value = "Mr.">Mr.</option>
+								<option value = "Ms.">Ms.</option>
+								<option value = "Mrs.">Mrs.</option>
+								<option value = "Dr.">Dr.</option>
+							</select>
+							<input type="text" name="firstName" id= "firstName" placeholder="*Given Name" size="30" maxlength = "30" />
+							<input type="text" name="lastName" id = "lastName" placeholder="*Family Name" size="30" maxlength = "30" />
+							<input type="tel" name="mobilePhone" id = "mobilePhone" placeholder="*Primary Contact Number" size="30" maxlength = "10" />
+							<input type="text" name="email" id = "email" placeholder="*Email Address" />
+							<input type="text" name="address" id = "address" placeholder="*Address" size="30" maxlength = "30" />
+							<input type="text" name="suburb" id = "suburb" placeholder="*Suburb" size="30" maxlength = "30" />
+							<input type="tel" name="postcode" id = "postcode" placeholder="*postcode" size="30" maxlength = "4" />
+							<select name = "state">
+								<option value="" disabled selected hidden>*State</option>
+								<option name="act">Australian Capital Territory</option>
+								<option name="nsw">New South Wales</option>
+								<option name="nt">Northern Territory</option>
+								<option name="qld">Queensland</option>
+								<option name="sa">South Australia</option>
+								<option name="tas">Tasmania</option>
+								<option name="vic">Victoria</option>
+								<option name="wa">Western Australia</option>
+							</select>
 							</div>
-							<div class="form-errors"></div></br>
-							<input type="button" name="next" class="next action-button" value="Submit Detail" />
+							<h2 class="fs-title">Please fill in your Infringment Notice Details</h2>
+							<h3 class="fs-subtitle"></h3>
+							<div class = "infringementNoticeDetail">
+							<input type="text" name="infNo" id= "infNo" placeholder="*Infringement Notice Number" size="30" maxlength = "30" />
+							<input type="text" name="regNo" id= "regNo" placeholder="*Registration Number" size="30" maxlength = "20" />
+							<input type="text" name = "infDate" id="infDate" placeholder="*Infringement Date"  onfocus="(this.type='date')" onblur="(this.type='text')" />
+							<input type="text" name="infLocation" id= "infLocation" placeholder="*Location" size="30" maxlength = "60" />
+							</div>
+							<div class="form-errors"></div><br/>
+							<input type="button" name="next" class="next action-button" value="Submit Details" />
 							<input type="button" name="previous" class="previous action-button" value="Previous" />
 						</fieldset>
 						<fieldset>
 							<h2 class="fs-title">Donate to Charity</h2>
-							<h3 class="fs-subtitle">Donate to Charity via Stripe payment service</h3>
-							<h3 class="fs-subtitle"> Please donate minimum $2 to obtain form. </h3>
+							<h3 class="fs-subtitle">Donate to Charity Securely via Stripe payment service</h3>
+							<h3 class="fs-subtitle"> Please donate minimum $2 to obtain infringement notice review letter. </h3>
 							<span style ="white-space:nowrap">
 								<label for= "chargeAmount">$</label>
-								 <input type="number" id="chargeAmount" name= "chargeAmount" placeholder= "Donation Amount" min="2.00" step="1.00" /></br>
+								 <input type="number" id="chargeAmount" name= "chargeAmount" placeholder= "Donation Amount" min="2.00" step="1.00" /><br/>
 							</span>
 							<input type="hidden" id="stripeToken" name="stripeToken" />
 							<input type="hidden" id="stripeEmail" name="stripeEmail" />
-							<input type="button" id="customCharge" class = "action-button" value = "Donate" /> </br>
+							<input type="button" id="customCharge" class = "action-button" value = "Donate" /> <br/>
 							<input type="button" name="previous" class="previous action-button" value="Edit Details" />
 						</fieldset>
 					</div>
