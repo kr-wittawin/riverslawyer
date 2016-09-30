@@ -157,7 +157,7 @@
 							<div class = "infringementNoticeDetail">
 								<input type="text" name="infNo" id= "infNo" placeholder="*Infringement Notice Number" size="30" maxlength = "30" />
 								<input type="text" name="regNo" id= "regNo" placeholder="*Registration Number" size="30" maxlength = "20" />
-								<input type="text" name ="infDate" id="infDate" placeholder="*Infringement Date (DD/MM/YYYY)" />
+								<input type="text" name ="infDate" id="infDate" placeholder="*Infringement Date" readonly='true' />
 								<input type="text" name="infstreet-address" id= "infstreet-address" placeholder="*Infringement Location" size="30" maxlength = "30" />
 								<input type="text" name="infsuburb-address" id = "infsuburb-address" placeholder="*Infringement Suburb" size="30" maxlength = "30" />
 								<select name = "state">
