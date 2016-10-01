@@ -20,13 +20,16 @@ PHP script for email
                     $subject = $_REQUEST['subject'];
                     $email = $_REQUEST['email'];
                     $name = $_REQUEST['name'];
-                    $message = $_REQUEST['message'];
 
-                    $headers = "From: $name \r\n";
-                    $headers .= "Reply to: $email \r\n";
-                    $headers .= "Topic: $subject \r\n";
+                    $message = "From: $name \r\n";
+                    $message .= "Reply to: $email \r\n";
+                    $message .= "Topic: $subject \r\n ";
+                    $message .= "=================== \r\n\r\n\r\n ";
+                    $message .= $_REQUEST['message'];
 
-                    $sent = mail($to,$subject,$message,$headers);
+                    
+
+                    $sent = mail($to,$subject,$message);
                     if($sent) {
                         print ('<div class="col-md-6 col-sm-6 col-xs-12 text-center" style="margin-top:100px;">
                         <h2>Your mail was sent</h2> <br>
