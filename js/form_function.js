@@ -1,4 +1,19 @@
 $(document).ready(function() {
+	//disclaimer modal//
+	$(".disclaimer-button").click(function(){
+		$("#disclaimer").css("display", "block");
+	});
+	$(".close-button").click(function(){
+		$("#disclaimer").css("display", "none");
+	});
+	// When the user clicks anywhere outside of the modal, close it
+	$(document).on("click",function (event) {
+		var modal = document.getElementById('disclaimer');
+	    if (event.target == disclaimer) {
+	        modal.style.display = "none";
+	    }
+	});
+
 	///////////////////
 	//multi-step form//
 	///////////////////
@@ -248,32 +263,6 @@ $(document).ready(function() {
 	    handler.close();
 	});
 
-
-/*	//submit button functionality
-	$(".submit").click(function() {
-		var chosenInfOption = $('input[name="infringementOption"]:checked').val();
-		var infOptReason = $('input[name="infringementOption"]:checked').next('label:first').text();
-		var firstName = $('#firstName') .val();
-		var lastName = $('#lastName').val();
-		var InfNo = $('#infNo').val();
-		switch (chosenInfOption) {
-			case '1':
-			$('#letterOutput').html(function() {
-				return "No. 1" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
-			});
-			break;
-			case '2':
-			$('#letterOutput').html(function() {
-				return "No. 2" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
-			});
-			break;
-			case '3':
-			$('#letterOutput').html(function() {
-				return "No. 3" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
-			});
-		}
-	});
-	*/
 });
 
 /*	//superseded form validation method

@@ -100,6 +100,22 @@
 
 			<div class= "container formSize">
 
+				<!-- Disclaimer Modal -->
+				<div id = "disclaimer" class "disclaimer">
+					<div class = "disclaimer-modalBox">
+						<div class="disclaimer-content">
+						  <div class="disclaimer-header">
+							<span class="close-button">×</span>
+							<h2>Disclaimer</h2>
+						  </div>
+						  <div class="disclaimer-body">
+							<p>Only as guidance</p><br/>
+							<p>Guidance only</p>
+						  </div>
+						</div>
+					</div>
+				</div>
+
 				<!-- multistep form -->
 				<form method = "post" action = "parkingInfringementReviewLetter.php" id="msform" >
 					<!-- progressbar -->
@@ -130,7 +146,9 @@
 								<label for='infringement6'>The parking sign was not visible.</label><br/>
 							</div></br>
 							<div class="form-errors"></div><br/>
+							<input type="button" class="disclaimer-button" value="Disclaimer" />
 							<input type="button" name="next" class="next action-button" value="Next" />
+							<input type="button" name="previous" class="previous action-button" value="Previous" />
 						</fieldset>
 						<fieldset>
 							<h2 class="fs-title">Please Fill in Your Personal Details</h2>
