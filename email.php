@@ -23,7 +23,6 @@ PHP script for email
                     $message = $_REQUEST['message'];
 
                     $headers = "From: $name \r\n";
-                    $headers .= "From: $name \r\n";
                     $headers .= "Reply to: $email \r\n";
                     $headers .= "Topic: $subject \r\n";
 
