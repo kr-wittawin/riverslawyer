@@ -226,7 +226,6 @@ $(document).ready(function(){
         });
     });
 
-
 	/* ========================================================================= */
 	/*	Fix Slider Height
 	/* ========================================================================= */
@@ -285,8 +284,6 @@ $(document).ready(function(){
 	});
     */
 });
-
-
 /* ==========  START GOOGLE MAP ========== */
 /*
 // When the window has finished loading create our google map below

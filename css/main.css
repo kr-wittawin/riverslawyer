@@ -1051,11 +1051,22 @@ textarea.form-control {
 	font-size: 13px;
 }
 
+#msform select {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
 /*buttons*/
-.infringement_reason input {
+.infringementOption input {
     visibility:hidden;
 }
-.infringement_reason label {
+.infringementOption label {
     cursor: pointer;
 	background: #2C3E50;
 	font-weight: bold;
@@ -1063,10 +1074,11 @@ textarea.form-control {
 	border: 0 none;
 	border-radius: 1px;
 	cursor: pointer;
-	padding: 10px 20px;
+	padding: 10px 2px;
+    margin:-5px 0px;
     width: 100%;
 }
-.infringement_reason input:checked + label {
+.infringementOption input:checked + label {
     background: #0077BE;
 	border-width: 2px;
 	border-style:solid;
@@ -1122,7 +1134,7 @@ textarea.form-control {
 	text-transform: uppercase;
 	font-size:11px;
 	/*width controls number of steps in the progressbar*/
-	width: 25%;
+	width: 20%;
 	float: left;
 	position: relative;
     left: -20px;
@@ -1162,6 +1174,11 @@ textarea.form-control {
 #progressbar li.active:before,  #progressbar li.active:after{
 	background: #27AE60;
 	color: white;
+}
+
+/*outputs*/
+#letterOutput {
+    text-align:left;
 }
 
 /*============================================================
@@ -1308,6 +1325,19 @@ textarea.form-control {
     }
     .navbar-fixed-top .navbar-collapse {
         margin-top: 20px;
+    }
+    /*form*/
+    #progressbar li {
+        font-size: 11px;
+    }
+    #msform {
+        margin: 150px auto 0;
+    }
+}
+@media only screen and (max-width: 410px) {
+    /*form*/
+    #progressbar li {
+        font-size: 8px;
     }
 }
 /*============================================================

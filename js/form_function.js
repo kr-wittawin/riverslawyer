@@ -1,6 +1,7 @@
 $(document).ready(function() {
-
-	//multi-step form
+	///////////////////
+	//multi-step form//
+	///////////////////
 	var current_fs, next_fs, previous_fs; //fieldsets
 	var left, opacity, scale; //fieldset properties which we will animate
 	var animating; //flag to prevent quick multi-click glitche
@@ -15,7 +16,7 @@ $(document).ready(function() {
 	//next button functionality
 	$(".next").click(function(){
 		// initialize validate plugin on the form
-		$('#msform').validate({
+/*		$('#msform').validate({
 			errorPlacement: function (error, element) {
 
             var lastError = $(element).data('lastError'),
@@ -66,7 +67,7 @@ $(document).ready(function() {
 
 		if ((!$('#msform').valid())) {
 			return false;
-		}
+		}*/
 
 		if(animating) return false;
 		animating = true;
@@ -110,6 +111,7 @@ $(document).ready(function() {
 			//this comes from the custom easing plugin
 			easing: 'easeInOutBack'
 		});
+		$("html, body").animate({ scrollTop: 0 }, "slow");
 	});
 
 	//previous button functionality
@@ -156,9 +158,12 @@ $(document).ready(function() {
 			//this comes from the custom easing plugin
 			easing: 'easeInOutBack'
 		});
+		$("html, body").animate({ scrollTop: 0 }, "slow");
 	});
 
-	//Stripe Configuration
+	////////////////////////
+	//Stripe Configuration//
+	////////////////////////
 	var handler = StripeCheckout.configure({
 	  key: 'pk_test_4DdKTYdDCQZKocZKjVWQjsLL',
 	  locale: 'auto',
@@ -225,7 +230,7 @@ $(document).ready(function() {
 			return false;
 		}
 
-		//Stripe Checkout
+		//Stripe Checkout//
 /*	    var displayAmount = parseFloat(Math.floor($("#chargeAmount").val() * 100) / 100).toFixed(2);*/
 		var displayAmount = $("#chargeAmount").val();
 	    // Open Checkout with further options
