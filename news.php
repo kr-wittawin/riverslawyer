@@ -40,7 +40,7 @@
         <!--
         Fixed Navigation
         ==================================== -->
-        <header id="navigation" class="navbar-default navbar-fixed-top animated-header">
+        <header id="navigation" class="navbar-default navbar-fixed-top jumbotron">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -76,7 +76,7 @@
                         <li><a class="externallink" href="index.html">Home</a></li>
                         <li><a class="externallink" href="aboutus.html">About us</a></li>
 						<li><a class="externallink" href="expertise.html">Expertise</a></li>
-                        <li><a class="externallink" href="form.php">Automated Legal Services</a></li>
+                        <li><a class="externallink" href="index.html?tab=autoservices">Automated Legal Services</a></li>
 						<li><a href="#body">News</a></li>
                         <li><a class="externallink" href="index.html?tab=contactus">Contact us</a></li>
                     </ul>

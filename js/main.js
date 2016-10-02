@@ -160,6 +160,8 @@ $(document).ready(function(){
             $('.navbar-nav li a[href$="#news"]').click()
         } else if(getParameterByName('tab') == 'contactus'){
             $('.navbar-nav li a[href$="#contactus"]').click()
+        } else if(getParameterByName('tab') == 'autoservices'){
+            $('.navbar-nav li a[href$="#autoservices"]').click()
         }
 
         /* select service */
