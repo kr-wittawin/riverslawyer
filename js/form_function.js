@@ -31,7 +31,7 @@ $(document).ready(function() {
 	//next button functionality
 	$(".next").click(function(){
 		// initialize validate plugin on the form
-/*		$('#msform').validate({
+		$('#msform').validate({
 			errorPlacement: function (error, element) {
 
             var lastError = $(element).data('lastError'),
@@ -50,8 +50,10 @@ $(document).ready(function() {
         },
 			rules: {
 				infringementOption: {required: true},
-				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				title: {required:true},
+				givenName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				familyName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				mobilePhone: {required: true, },
 				email: {required: true, email:true},
 				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
 				chargeAmount: {required: true,min: 2}
@@ -82,7 +84,7 @@ $(document).ready(function() {
 
 		if ((!$('#msform').valid())) {
 			return false;
-		}*/
+		}
 
 		if(animating) return false;
 		animating = true;
