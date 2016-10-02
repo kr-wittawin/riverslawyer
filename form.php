@@ -148,7 +148,6 @@
 							<div class="form-errors"></div><br/>
 							<input type="button" class="disclaimer-button" value="Disclaimer" />
 							<input type="button" name="next" class="next action-button" value="Next" />
-							<input type="button" name="previous" class="previous action-button" value="Previous" />
 						</fieldset>
 						<fieldset>
 							<h2 class="fs-title">Please Fill in Your Personal Details</h2>
@@ -176,8 +175,8 @@
 								<input type="text" name="infNo" id= "infNo" placeholder="*Infringement Notice Number" size="30" maxlength = "30" />
 								<input type="text" name="regNo" id= "regNo" placeholder="*Registration Number" size="30" maxlength = "20" />
 								<input type="text" name ="infDate" id="infDate" placeholder="*Infringement Date" readonly='true' />
-								<input type="text" name="infstreet-address" id= "infstreet-address" placeholder="*Infringement Location" size="30" maxlength = "30" />
-								<input type="text" name="infsuburb-address" id = "infsuburb-address" placeholder="*Infringement Suburb" size="30" maxlength = "30" />
+								<input type="text" name="infstreetAddress" id= "infstreetAddress" placeholder="*Infringement Location" size="30" maxlength = "30" />
+								<input type="text" name="infsuburbAddress" id = "infsuburbAddress" placeholder="*Infringement Suburb" size="30" maxlength = "30" />
 								<select name = "state">
 									<option value="" disabled selected hidden>*Infringement State</option>
 									<option value="ACT">Australian Capital Territory</option>
