@@ -60,12 +60,12 @@ $(document).ready(function() {
 				title: {required: true},
 				givenName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
 				familyName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				mobilePhone: {required: true},
+				mobilePhone: {required: true, pattern:/^[0-9]+[0-9 ]+$/},
 				infNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
 				regNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
 				infDate:{required: true},
 				infstreetAddress:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9// ]+$/},
-				infsuburbAddress:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
+				infsuburbAddress:{required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
 				state:{required: true},
 				chargeAmount: {required: true,min: 2}
 			},
@@ -81,7 +81,8 @@ $(document).ready(function() {
 					pattern:"Please Enter a Valid Family Name"
 				},
 				mobilePhone: {
-					required:"Please fill in Your Mobile Phone Number",
+					required:"Please fill in Your Phone Number",
+					pattern:"Please Enter a Valid Phone Number"
 				},
 				infNo: {
 					required:"Please fill in Your Parking Infringement Number",
@@ -92,9 +93,9 @@ $(document).ready(function() {
 					pattern:"Please Enter a Valid Vehicle Registration Number"
 				},
 				infDate: {
-					required:"Please Select the Day of the Infringement"},
+					required:"Please Select the Date of the Infringement"},
 				infstreetAddress: {
-					required:"Please fill in the Street Name",
+					required:"Please Fill in the Street Name",
 					pattern:"Please Enter a Valid Street Name"
 				},
 				infsuburbAddress: {
