@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    echo "<a href='logout.php'>Logout</a><br>";
+    echo "User is " . $_SESSION["testuser"];
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->

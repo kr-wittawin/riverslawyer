@@ -123,6 +123,7 @@ $(document).ready(function(){
     /* ========================================================================= */
 
     $("#business").on('click', function(e){
+        e.preventDefault();
         window.location.href = "expertise.html";
         window.location = "expertise.html?tab=business";
     });
@@ -185,6 +186,13 @@ $(document).ready(function(){
             $("#business-menu").addClass("current");
             $("#business-content").addClass("active");
         }
+
+        /* news slider */
+        $('.newsslider').bxSlider({
+            slideWidth: 300,
+            minSlides: 1,
+            maxSlides: 4
+        });
     });
 
     /* =========================================================================

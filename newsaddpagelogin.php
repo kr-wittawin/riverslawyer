@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['testuser'] = 'onlyworld';
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -13,7 +18,7 @@
     <body>
         <h1> Login to Add News </h1>
 
-        <form action="newsaddpageform.html">
+        <form action="newsaddpageform.php">
             First name:<br>
             <input type="text" name="firstname" placeholder="username"><br>
             Last name:<br>
@@ -22,6 +27,22 @@
         </form>
 
         <p>Login Button to add News.</p>
+
+        <?php
+
+            $db = mysqli_connect('localhost','root','','test');
+            $sql = "SELECT * FROM test_table";
+            if($result = mysqli_query($db,$sql)){
+                if($result->num_rows) {
+                    $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+                    foreach($rows as $row) {
+                        echo '/..........', $row['user'], ' ', $row['color'],  '<br>';
+                    }
+                }
+            }
+
+        ?>
 
     </body>
 </html>

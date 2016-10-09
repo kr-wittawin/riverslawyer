@@ -22,15 +22,14 @@
 		================================================== -->
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
 		<!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.css">
 		<!-- bootstrap.min -->
         <link rel="stylesheet" href="css/bootstrap.css">
 		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/slit-slider.css">
-		<!-- bootstrap.min -->
         <link rel="stylesheet" href="css/animate.css">
+        <!-- bxSlider CSS file -->
+        <link rel="stylesheet" href="css/jquery.bxslider.css">
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -96,78 +95,75 @@
 
         <!--banner end-->
 
-        <!-- news header-->
-
         <div class="container newsheader">
-            <ul>
                 <?php
+                    /* news header */
                     $dir = 'news/';
-                    $images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE);
-                    $contents = glob($dir . '*.{txt}', GLOB_BRACE);
+                    
+                    $folders = glob($dir . '*', GLOB_BRACE);
+                    $folders = array_combine($folders, array_map("filemtime", $folders));
+                    arsort($folders);
+                    $folders = (array_keys($folders));
+                    $num_news = count($folders);
+                    $first_news = 0;
+                    $currcontent = '';
 
-                    $num_of_files = 3; //number of images to display
+                    if($num_news > 0) {
+                        echo '<ul class="newsslider">';
 
-                    foreach($contents as $content)
-                    {
-                        $index = 3 - $num_of_files;
+                        foreach($folders as $folder)
+                        {
+                            $image = glob($folder . '/*.{gif,png,jpg,jpeg}', GLOB_BRACE);
+                            $image = $image[0];
+                            $content = glob($folder . '/*.txt', GLOB_BRACE);
+                            $content = $content[0];
 
-                        $handle = fopen($content, "r");
-                        if ($handle) {
-                            if(($line = fgets($handle)) !== false) {
-                                $title = $line;
+                            $handle = fopen($content, "r");
+                            if ($handle) {
+                                if(($line = fgets($handle)) !== false) {
+                                    $title = $line;
+                                }
+                                while((($line = fgets($handle)) !== false) && ($first_news==0)) {
+                                    $currcontent .= $line . '<br>';
+                                }
+                                fclose($handle);
+                            } else {
+                                echo "File error";
                             }
-                            fclose($handle);
-                        } else {
-                            echo "File error";
-                        }
+                            echo "<li><div class='news' id='".$title."'>
+                                    <img src=".$image."><br>
+                                    <b class='title'>".$title."</b><br>
+                                    Published on ".date('d M y', filemtime($content)) ."
+                                </div></li>"; //display image
 
-                        if($num_of_files > -1)
-                        echo "<li class='bignews'>
-                                <br><img src=".$images[$index]."><br>
-                                <b>".$title."</b><br>
-                                Created on ".date('d M y', filemtime($content)) ."
-                            </li>"; //display images
-                        else
-                        break;
+                            /* for first news to display */
+                            if($first_news==0){
+                                $currimage = $image;
+                                $currtitle = $title;
+                                $first_news = 1;
+                            }
+                        } 
+                        echo '</ul></div>';
 
-                        $num_of_files--;
+                        /*content*/
+                        echo '<div class="container">
+                                <div class = "row tab-content service-panel">
+                                    <div class="col-md-8 col-sm-6 col-xs-12 service-content">
+                                        <div class="news-title">
+                                            <h1>'.$currtitle.'</h1>
+                                        </div><br>
+
+                                        <div class="newscontent">
+                                            <img src="'.$currimage.'" alt="Picture">
+                                            <p>'.$currcontent.'</p>
+                                        </div>
+                                    </div>';
+                    } else {
+                        echo '<h1><em>Please stay tuned for updates...</em></h1>';
                     }
 
                 ?>
-                <li class="smallnews">
-                    <b>Little News</b>
-                    <ul>
-                        <li style="display: block">Other News4</li>
-                        <li style="display: block">Other News5</li>
-                        <li style="display: block">Other News6</li>
-                        <li style="display: block">Other News7</li>
-                        <li style="display: block">Other News8</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <!-- news header end -->
-
-        <!--content start-->
-            <div class="container">
-                <div class = "row tab-content service-panel">
-                    <div class="col-md-8 col-sm-6 col-xs-12 service-content">
-                        <div class="content-title">
-                            <h1>News</h1>
-                        </div>
-
-                        <div>
-                            <img scr="news/img3.jpeg" alt="Picture">
-
-                            <h2>Title 1</h2>
-                            <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
-                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-                            <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
-                        </div>
-                    </div>
-
+                    <!--contact sidebar-->
                     <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel">
                         <div class="title">
                           <h2>Contact Us</h2>
@@ -203,22 +199,6 @@
                 <br><br>
             <!--content end-->
 
-        <!-- <?php
-
-            $db = mysqli_connect('localhost','root','','test');
-            $sql = "SELECT * FROM test_table";
-            if($result = mysqli_query($db,$sql)){
-                if($result->num_rows) {
-                    $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
-
-                    foreach($rows as $row) {
-                        echo '/..........', $row['user'], ' ', $row['color'],  '<br>';
-                    }
-                }
-            }
-
-        ?>-->
-
         <footer id="footer">
 			<div class="container">
 				<div class="row text-center">
@@ -244,11 +224,64 @@
         <script src="js/jquery.singlePageNav.min.js"></script>
         <!-- jquery easing -->
         <script src="js/jquery.easing.min.js"></script>
-        <!-- Fullscreen slider -->
-        <script src="js/jquery.slitslider.js"></script>
 		<!-- onscroll animation -->
         <script src="js/wow.min.js"></script>
+        <!-- bxSlider Javascript file -->
+        <script src="js/jquery.bxslider.js"></script>
 		<!-- Custom Functions -->
         <script src="js/main.js"></script>
     </body>
 </html>
+
+
+<!--$images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE);
+                    $images = array_combine($images, array_map("filemtime", $images));
+                    arsort($images);
+                    $images = (array_keys($images));
+                    
+                    $contents = glob($dir . '*.{txt}', GLOB_BRACE);
+                    $contents = array_combine($contents, array_map("filemtime", $contents));
+                    arsort($contents);
+                    $contents = (array_keys($contents)); 
+
+                    $num_of_files = 3; //number of images to display
+
+                    foreach($contents as $content)
+                    {
+                        $index = 3 - $num_of_files;
+
+                        $handle = fopen($content, "r");
+                        if ($handle) {
+                            if(($line = fgets($handle)) !== false) {
+                                $title = $line;
+                            }
+                            fclose($handle);
+                        } else {
+                            echo "File error";
+                        }
+
+                        if($index < 3)
+                        echo "<li class='bignews'>
+                                <br><img src=".$images[$index]."><br>
+                                <b>".$title."</b><br>
+                                Published on ".date('d M y', filemtime($content)) ."
+                            </li>"; //display images
+                        else
+                        break;
+
+                        $num_of_filesminusminus;
+                    } 
+
+                    
+
+                ?>
+                <li class="smallnews">
+                    <b>Little News</b>
+                    <ul>
+                        <li style="display: block">Other News4</li>
+                        <li style="display: block">Other News5</li>
+                        <li style="display: block">Other News6</li>
+                        <li style="display: block">Other News7</li>
+                        <li style="display: block">Other News8</li>
+                    </ul>
+                </li> -->

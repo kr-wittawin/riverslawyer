@@ -187,7 +187,7 @@ require_once(__DIR__ . '/stripe_config.php');
 									$infNo = $_POST['infNo'];
 									$regNo = strtoupper($_POST['regNo']);
 									$infDate = $_POST['infDate'];
-									$concLoc = $_POST['infstreetAddress'] . " " . $_POST['infsuburbAddress'] . " " . $_POST['state'];
+									$concLoc = $_POST['infstreet-address'] . " " . $_POST['infsuburb-address'] . " " . $_POST['state'];
 									$infLoc = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($concLoc))));
 
 									$Option1 =  "<p>To whom it may concern, </p><br/>" .

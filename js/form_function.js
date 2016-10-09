@@ -1,20 +1,4 @@
 $(document).ready(function() {
-
-	//disclaimer modal//
-	$(".disclaimer-button").click(function(){
-		$("#disclaimer").css("display", "block");
-	});
-	$(".close-button").click(function(){
-		$("#disclaimer").css("display", "none");
-	});
-	// When the user clicks anywhere outside of the modal, close it
-	$(document).on("click",function (event) {
-		var modal = document.getElementById('disclaimer');
-	    if (event.target == disclaimer) {
-	        modal.style.display = "none";
-	    }
-	});
-
 	///////////////////
 	//multi-step form//
 	///////////////////
@@ -23,22 +7,16 @@ $(document).ready(function() {
 	var animating; //flag to prevent quick multi-click glitche
 
  	// initialize tooltipster on text input elements
-	$('#msform input[type="text"], #msform input[type="radio"], #msform input[type="number"], #msform input[type="tel"], #msform select').tooltipster({
+	$('#msform input[type="text"], #msform input[type="radio"], #msform input[type="number"]').tooltipster({
         trigger: 'custom',
         onlyOne: false,
         position: 'right'
     });
 
-	//add australian phone number validator
-/*	jQuery.validator.addMethod("phoneAus",function(a,b){
-		return this.optional(b)||a.length>14&&a.match(/^[0-9]{10}$|^\(0[1-9]{1}\)[0-9]{8}$|^[0-9]{8}$|^[0-9]{4}[ ][0-9]{3}[ ][0-9]{3}$|^\(0[1-9]{1}\)[ ][0-9]{4}[ ][0-9]{4}$|^[0-9]{4}[ ][0-9]{4}$/)}
-	,"Please specify a valid mobile phone number");*/
-	//add select validator
-
 	//next button functionality
 	$(".next").click(function(){
 		// initialize validate plugin on the form
-		$('#msform').validate({
+/*		$('#msform').validate({
 			errorPlacement: function (error, element) {
 
             var lastError = $(element).data('lastError'),
@@ -57,53 +35,30 @@ $(document).ready(function() {
         },
 			rules: {
 				infringementOption: {required: true},
-				title: {required: true},
-				givenName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				familyName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				mobilePhone: {required: true, pattern:/^[0-9]+[0-9 ]+$/},
-				infNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
-				regNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
-				infDate:{required: true},
-				infstreetAddress:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9// ]+$/},
-				infsuburbAddress:{required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				state:{required: true},
+				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				email: {required: true, email:true},
+				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
 				chargeAmount: {required: true,min: 2}
 			},
 			messages: {
-				infringementOption: {required:"Please Select an Infringement Scenario"},
-				title: {required: "Please Select a Title"},
-				givenName: {
-					required:"Please Fill in Your First Name",
+				infringementOption: {required:"Please Select an Infringement Reason"},
+				firstName: {
+					required:"Please Fill in Your Name",
 					pattern:"Please Enter a Valid First Name"
 				},
-				familyName: {
-					required:"Please Fill in Your Family Name",
-					pattern:"Please Enter a Valid Family Name"
+				lastName: {
+					required:"Please Fill in Your Last Name",
+					pattern:"Please Enter a Valid Last Name"
 				},
-				mobilePhone: {
-					required:"Please fill in Your Phone Number",
-					pattern:"Please Enter a Valid Phone Number"
+				email: {
+					required:"Please fill in Your Email Address",
+					email:"Please Enter a Valid Email Address"
 				},
-				infNo: {
+				infringementNo: {
 					required:"Please fill in Your Parking Infringement Number",
 					pattern:"Please Enter a Valid Parking Infringement Number"
 				},
-				regNo: {
-					required:"Please fill in Your Vehicle Registration Number",
-					pattern:"Please Enter a Valid Vehicle Registration Number"
-				},
-				infDate: {
-					required:"Please Select the Date of the Infringement"},
-				infstreetAddress: {
-					required:"Please Fill in the Street Name",
-					pattern:"Please Enter a Valid Street Name"
-				},
-				infsuburbAddress: {
-					required:"Please fill in the Suburb Name",
-					pattern:"Please Enter a Valid Suburb Name"
-				},
-				state: {
-					required:"Please Select the State of the Infringement"},
 				chargeAmount: {
 					required:"Please Enter an Amount to Donate",
 					min: "Please donate minimum $2"}
@@ -112,7 +67,7 @@ $(document).ready(function() {
 
 		if ((!$('#msform').valid())) {
 			return false;
-		}
+		}*/
 
 		if(animating) return false;
 		animating = true;
@@ -241,52 +196,30 @@ $(document).ready(function() {
         },
 			rules: {
 				infringementOption: {required: true},
-				title: {required:true},
-				givenName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				familyName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
-				mobilePhone: {required: true},
-				infNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
-				regNo:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
-				infDate:{required: true},
-				infstreetAddress:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9// ]+$/},
-				infsuburbAddress:{required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
-				state:{required: true},
+				firstName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				lastName: {required: true, pattern:/^[a-zA-Z]+[a-zA-Z ]+$/},
+				email: {required: true, email:true},
+				infringementNo: {required: true, pattern:/^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$/},
 				chargeAmount: {required: true,min: 2}
 			},
 			messages: {
-				infringementOption: {required:"Please Select an Infringement Scenario"},
-				title: {required:"Please Select a Title"},
-				givenName: {
-					required:"Please Fill in Your First Name",
+				infringementOption: {required:"Please Select an Infringement Reason"},
+				firstName: {
+					required:"Please Fill in Your Name",
 					pattern:"Please Enter a Valid First Name"
 				},
-				familyName: {
-					required:"Please Fill in Your Family Name",
-					pattern:"Please Enter a Valid Family Name"
+				lastName: {
+					required:"Please Fill in Your Last Name",
+					pattern:"Please Enter a Valid Last Name"
 				},
-				mobilePhone: {
-					required:"Please fill in Your Mobile Phone Number",
+				email: {
+					required:"Please fill in Your Email Address",
+					email:"Please Enter a Valid Email Address"
 				},
-				infNo: {
+				infringementNo: {
 					required:"Please fill in Your Parking Infringement Number",
 					pattern:"Please Enter a Valid Parking Infringement Number"
 				},
-				regNo: {
-					required:"Please fill in Your Vehicle Registration Number",
-					pattern:"Please Enter a Valid Vehicle Registration Number"
-				},
-				infDate: {
-					required:"Please Select the Day of the Infringement"},
-				infstreetAddress: {
-					required:"Please fill in the Street Name",
-					pattern:"Please Enter a Valid Street Name"
-				},
-				infsuburbAddress: {
-					required:"Please fill in the Suburb Name",
-					pattern:"Please Enter a Valid Suburb Name"
-				},
-				state: {
-					required:"Please Select the State of the Infringement"},
 				chargeAmount: {
 					required:"Please Enter an Amount to Donate",
 					min: "Please donate minimum $2"}
@@ -315,6 +248,32 @@ $(document).ready(function() {
 	    handler.close();
 	});
 
+
+/*	//submit button functionality
+	$(".submit").click(function() {
+		var chosenInfOption = $('input[name="infringementOption"]:checked').val();
+		var infOptReason = $('input[name="infringementOption"]:checked').next('label:first').text();
+		var firstName = $('#firstName') .val();
+		var lastName = $('#lastName').val();
+		var InfNo = $('#infNo').val();
+		switch (chosenInfOption) {
+			case '1':
+			$('#letterOutput').html(function() {
+				return "No. 1" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
+			});
+			break;
+			case '2':
+			$('#letterOutput').html(function() {
+				return "No. 2" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
+			});
+			break;
+			case '3':
+			$('#letterOutput').html(function() {
+				return "No. 3" + "</br>" + "You reason is : " + infOptReason + "</br>" + "Your name is : " + firstName + " " + lastName + "</br>" + "Infringement Number = " + InfNo;
+			});
+		}
+	});
+	*/
 });
 
 /*	//superseded form validation method
