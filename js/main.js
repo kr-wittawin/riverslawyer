@@ -193,6 +193,16 @@ $(document).ready(function(){
             minSlides: 1,
             maxSlides: 4
         });
+
+        /* news content */
+        $(".news").click(function() {
+            title = $(this).find('.title').text();
+            imagepath = $(this).find('img').attr('id');
+            contentpath = $(this).find('.content').text();
+            $('.news-title h1').text(title);
+            $('.newscontent img').attr('src',imagepath);
+            $('.newscontent p').text(contentpath);
+        });
     });
 
     /* =========================================================================

@@ -1,7 +1,9 @@
 <?php
     session_start();
     echo "<a href='logout.php'>Logout</a><br>";
-    echo "User is " . $_SESSION["testuser"];
+    if(isset($_SESSION['testuser'])){
+        echo $_SESSION['testuser'];
+    } 
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -18,14 +20,14 @@
     <body>
         <h1> Add News </h1>
 
-        <form action="">
+        <form action="uploadnews.php" method="post" enctype="multipart/form-data">
             Upload photo: <br>
-            <input type="file" name="pic" accept="image/*"><br><br>
+            <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
             Title:<br>
             <input type="text" name="Title" placeholder="Title"><br>
             Content:<br>
-            <textarea name="message" placeholder="Messages..."></textarea><br>
-            <input type="submit" value="Add News">
+            <textarea style="height:300px;width:500px;" name="message" placeholder="Messages..."></textarea><br>
+            <input type="submit" value="Add News" name="submit">
         </form>
 
         <p>Add News</p>

@@ -105,7 +105,6 @@
                     arsort($folders);
                     $folders = (array_keys($folders));
                     $num_news = count($folders);
-                    $first_news = 0;
                     $currcontent = '';
 
                     if($num_news > 0) {
@@ -113,6 +112,7 @@
 
                         foreach($folders as $folder)
                         {
+                            $currcontent = '';
                             $image = glob($folder . '/*.{gif,png,jpg,jpeg}', GLOB_BRACE);
                             $image = $image[0];
                             $content = glob($folder . '/*.txt', GLOB_BRACE);
@@ -123,25 +123,19 @@
                                 if(($line = fgets($handle)) !== false) {
                                     $title = $line;
                                 }
-                                while((($line = fgets($handle)) !== false) && ($first_news==0)) {
+                                while((($line = fgets($handle)) !== false)) {
                                     $currcontent .= $line . '<br>';
                                 }
                                 fclose($handle);
                             } else {
                                 echo "File error";
                             }
-                            echo "<li><div class='news' id='".$title."'>
-                                    <img src=".$image."><br>
-                                    <b class='title'>".$title."</b><br>
+                            echo "<li><div class='news'>
+                                    <div class='content' style='display:none;'>".$currcontent."</div>
+                                    <img src=".$image." id='".$image."'><br>
+                                    <b class='title' id='".$content."'>".$title."</b><br>
                                     Published on ".date('d M y', filemtime($content)) ."
                                 </div></li>"; //display image
-
-                            /* for first news to display */
-                            if($first_news==0){
-                                $currimage = $image;
-                                $currtitle = $title;
-                                $first_news = 1;
-                            }
                         } 
                         echo '</ul></div>';
 
@@ -150,18 +144,29 @@
                                 <div class = "row tab-content service-panel">
                                     <div class="col-md-8 col-sm-6 col-xs-12 service-content">
                                         <div class="news-title">
-                                            <h1>'.$currtitle.'</h1>
+                                            <h1>Test Title</h1>
                                         </div><br>
 
                                         <div class="newscontent">
-                                            <img src="'.$currimage.'" alt="Picture">
-                                            <p>'.$currcontent.'</p>
-                                        </div>
+                                            <img src="news/6/iz.jpeg" alt="Picture"><br>
+                                <p>TEST CONTENT: Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                                <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                                <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
+                                <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+                                        </div><br>
                                     </div>';
                     } else {
-                        echo '<h1><em>Please stay tuned for updates...</em></h1>';
+                        echo '<div class="container">
+                                <div class="row tab-content service-panel">
+                                    <div class="col-md-8 col-sm-6 col-xs-12 service-content">
+                                        <div class="news-title">
+                                            <h1><em>Please stay tuned for updates...</em></h1>  
+                                        </div>
+                                    </div>';
                     }
-
                 ?>
                     <!--contact sidebar-->
                     <aside class="col-md-4 col-sm-6 col-xs-12 contact-panel">
