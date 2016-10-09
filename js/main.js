@@ -198,11 +198,12 @@ $(document).ready(function(){
         $(".news").click(function() {
             title = $(this).find('.title').text();
             imagepath = $(this).find('img').attr('id');
-            contentpath = $(this).find('.content').text();
+            content = $(this).find('.content').text();
             $('.news-title h1').text(title);
             $('.newscontent img').attr('src',imagepath);
-            $('.newscontent p').text(contentpath);
+            $('.newscontent p').text(content);
         });
+
     });
 
     /* =========================================================================
