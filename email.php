@@ -16,7 +16,7 @@ PHP script for email
                 <div class="sec-title text-center">
                     <div class="hidden-xs col-md-3 col-sm-3"></div>
                     <?php
-                    $to = "khunworld@hotmail.com";
+                    $to = "kevin.kang@riverslawyers.com.au";
                     $subject = $_REQUEST['subject'];
                     $email = $_REQUEST['email'];
                     $name = $_REQUEST['name'];

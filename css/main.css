@@ -696,6 +696,7 @@ textarea.form-control {
 .contact-details h3 {
     border-bottom: 1px solid #008ecc;
     font-weight: 700;
+    margin-top: -5px;
     margin-bottom: 15px;
     padding-bottom: 15px;
     text-transform: uppercase;
@@ -703,13 +704,6 @@ textarea.form-control {
 
 .contact-details p {
     line-height: 30px;
-}
-
-.contact-details p img {
-    height: 30px;
-    width: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .contact-details p i {
@@ -815,13 +809,9 @@ textarea.form-control {
             transform: translateX(30px);
 }
 
-.footer-social {
-    margin: 0 0 35px 0;
-}
-
 .footer-social ul {
     list-style: outside none none;
-    margin: 20px 0;
+    margin-bottom: -20px;
     padding: 0;
     text-align: center;
 }
@@ -830,6 +820,13 @@ textarea.form-control {
     display: inline-block;
     margin: 25px 0;
     width: 15%;
+}
+
+.footer-social li img {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 @media (max-width: 374px) {

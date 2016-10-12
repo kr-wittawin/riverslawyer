@@ -181,7 +181,7 @@
                         <div class="contact-panel-content">
                           <P> Rivers Lawyers</P>
                           <P> Suite 609, 530 Little Collins Street,</br> Melbourne VIC 3000</P>
-                          <P> Enquiry: +61 (0) 423 950 250</P>
+                          <P> Enquiry: +61 (0) 416 880 088</P>
                           <P> Email: kevin.kang@riverslawyers.com.au<P>
                         </div>
                         <div class="footer-social">
@@ -242,56 +242,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-
-
-<!--$images = glob($dir . '*.{gif,png,jpg,jpeg}', GLOB_BRACE);
-                    $images = array_combine($images, array_map("filemtime", $images));
-                    arsort($images);
-                    $images = (array_keys($images));
-                    
-                    $contents = glob($dir . '*.{txt}', GLOB_BRACE);
-                    $contents = array_combine($contents, array_map("filemtime", $contents));
-                    arsort($contents);
-                    $contents = (array_keys($contents)); 
-
-                    $num_of_files = 3; //number of images to display
-
-                    foreach($contents as $content)
-                    {
-                        $index = 3 - $num_of_files;
-
-                        $handle = fopen($content, "r");
-                        if ($handle) {
-                            if(($line = fgets($handle)) !== false) {
-                                $title = $line;
-                            }
-                            fclose($handle);
-                        } else {
-                            echo "File error";
-                        }
-
-                        if($index < 3)
-                        echo "<li class='bignews'>
-                                <br><img src=".$images[$index]."><br>
-                                <b>".$title."</b><br>
-                                Published on ".date('d M y', filemtime($content)) ."
-                            </li>"; //display images
-                        else
-                        break;
-
-                        $num_of_filesminusminus;
-                    } 
-
-                    
-
-                ?>
-                <li class="smallnews">
-                    <b>Little News</b>
-                    <ul>
-                        <li style="display: block">Other News4</li>
-                        <li style="display: block">Other News5</li>
-                        <li style="display: block">Other News6</li>
-                        <li style="display: block">Other News7</li>
-                        <li style="display: block">Other News8</li>
-                    </ul>
-                </li> -->
