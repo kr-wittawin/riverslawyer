@@ -128,14 +128,17 @@ $(document).ready(function(){
         window.location = "expertise.html?tab=business";
     });
     $("#property").on('click', function(e){
+        e.preventDefault();
         window.location.href = "expertise.html";
         window.location = "expertise.html?tab=property";
     });
     $("#immigration").on('click', function(e){
+        e.preventDefault();
         window.location.href = "expertise.html";
         window.location = "expertise.html?tab=immigration";
     });
     $("#litigation").on('click', function(e){
+        e.preventDefault();
         window.location.href = "expertise.html";
         window.location = "expertise.html?tab=litigation";
     });
