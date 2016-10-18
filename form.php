@@ -177,7 +177,7 @@
 								<input type="text" name ="infDate" id="infDate" placeholder="*Infringement Date" readonly='true' />
 								<input type="text" name="infstreetAddress" id= "infstreetAddress" placeholder="*Infringement Location" size="30" maxlength = "30" />
 								<input type="text" name="infsuburbAddress" id = "infsuburbAddress" placeholder="*Infringement Suburb" size="30" maxlength = "30" />
-								<select name = "state">
+								<!--<select name = "state">
 									<option value="" disabled selected hidden>*Infringement State</option>
 									<option value="ACT">Australian Capital Territory</option>
 									<option value="NSW">New South Wales</option>
@@ -187,7 +187,7 @@
 									<option value="TAS">Tasmania</option>
 									<option value="VIC">Victoria</option>
 									<option value="WA">Western Australia</option>
-								</select>
+								</select>-->
 							</div>
 							<div class="form-errors"></div><br/>
 							<input type="button" name="next" class="next action-button" value = "Submit Details" />

@@ -573,7 +573,7 @@ background-color:black;
             transition: all 0.3s ease 0s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .service-item {
         margin-bottom: 25px;
     }
@@ -619,7 +619,7 @@ background-color:black;
 }
 
 .contact-panel .footer-social img {
-    margin-top: -9px;
+    margin-top: -15px;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -696,7 +696,7 @@ textarea.form-control {
 .contact-details h3 {
     border-bottom: 1px solid #008ecc;
     font-weight: 700;
-    margin-top: -5px;
+    margin-top: 15px;
     margin-bottom: 15px;
     padding-bottom: 15px;
     text-transform: uppercase;
@@ -825,11 +825,15 @@ textarea.form-control {
 .footer-social li img {
     height: 40px;
     width: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
-@media (max-width: 374px) {
+@media (max-width: 767px) {
+    .footer-social ul {
+        list-style: outside none none;
+        margin-bottom: 5px;
+        padding: 0;
+        text-align: center;
+    }
     .footer-social ul li {
         display: inline-block;
         width: 10%;

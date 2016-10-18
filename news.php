@@ -179,11 +179,12 @@
                           <h2>Contact Us</h2>
                         </div>
                         <div class="contact-panel-content">
-                          <P> Rivers Lawyers</P>
-                          <P> Suite 609, 530 Little Collins Street,</br> Melbourne VIC 3000</P>
-                          <P> Enquiry: +61 (0) 416 880 088</P>
-                          <P> Email: kevin.kang@riverslawyers.com.au<P>
-                        </div>
+                          <p> Rivers Lawyers</p>
+                          <p> Suite 609, 530 Little Collins Street, Melbourne VIC 3000</p>
+                          <p> PO Box: 147 Collins Street West, Melbourne VIC 3000</p>
+                          <p> Enquiry: +61 (0) 416 880 088</p>
+                          <p> Email: kevin.kang@riverslawyers.com.au</p>
+                        </div><br>
                         <div class="footer-social">
 							<ul>
 								<li class="wow animated zoomIn"><a href="http://www.facebook.com" target="_blank">
@@ -192,18 +193,20 @@
 								<li class="wow animated zoomIn"><a href="http://www.twitter.com" target="_blank">
                                     <i class="fa fa-twitter fa-border2 fa-2x"></i>
                                 </a></li>
+                                <li class="wow animated zoomIn"><a href="http://www.instagram.com" target="_blank">
+                                    <i class="fa fa-instagram fa-border2 fa-2x"></i>
+                                </a></li>
 								<li class="wow animated zoomIn"><a href="http://www.whatsapp.com" target="_blank">
                                     <img src = "img/whatsapp.png" alt="whatsapp"><span></span>
                                 </a></li>
-								<li class="wow animated zoomIn"><a href="http://www.instagram.com" target="_blank">
-                                    <i class="fa fa-instagram fa-border2 fa-2x"></i>
+								<li class="wow animated zoomIn"><a href="http://www.wechat.com" target="_blank">
+                                    <img src = "img/wechat.png" alt="wechat">
                                 </a></li>
                                 <li class="wow animated zoomIn"><a href="http://www.kakaotalk.com" target="_blank">
                                     <img src = "img/kakaotalk.png" alt="kakaotalk"><span></span>
                                 </a></li>
 							</ul>
-						</div>
-                    </aside>
+						</div><br><br>
                 </div>
             </div>
                 <br><br>
